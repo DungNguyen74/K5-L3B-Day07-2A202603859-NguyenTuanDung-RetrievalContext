@@ -35,15 +35,22 @@
 
 | Cấu hình | Phương pháp, top-k, filter, rerank, context budget | Giả thuyết / thay đổi | Split | Hit@1 | Evidence Hit@3 | Context Evidence Rate | Thời gian / chi phí |
 |---|---|---|---|---|---|---|---|
-| Baseline | TF-IDF (Lexical), top-k=3, budget=800 | Phản xạ từ khóa cơ bản không qua embedding | dev | 10/15 (66.7%) | 14/15 (93.3%) | 10/15 (66.7%) | 5.32ms / $0 |
-| Phương pháp 2 | [Đang triển khai CP2: Dense ChromaDB MiniLM] | Vector similarity search trên 384d | dev | | | | |
-| Phương pháp 3 | [Đang triển khai CP2: Hybrid RRF / Reranker] | Kết hợp Lexical + Dense hoặc Reranker | dev | | | | |
-| Cải thiện 1 | | | dev | | | | |
-| Cải thiện 2 | | | dev | | | | |
+| **Baseline (P1)** | TF-IDF Lexical, top-k=3, budget=800 | Khớp từ khóa chuẩn hóa NFC | dev | 10/15 (66.7%) | 14/15 (93.3%) | 10/15 (66.7%) | 4.64ms / $0 |
+| **Phương pháp 2 (P2)** | Dense ChromaDB (MiniLM-384d), top-k=3, budget=800 | Truy xuất ngữ nghĩa cosine space | dev | 8/15 (53.3%) | 13/15 (86.7%) | 8/15 (53.3%) | 275.71ms / $0 |
+| **Phương pháp 3 (P3)** | Hybrid RRF (Dense + TF-IDF), k=60, top-k=3, budget=800 | Hợp nhất thứ hạng Reciprocal Rank Fusion | dev | 9/15 (60.0%) | 14/15 (93.3%) | 9/15 (60.0%) | 288.44ms / $0 |
+| Cải thiện 1 | [Triển khai CP4: Budget 1500 chars] | Mở rộng budget tránh cắt mất rank 2-3 | dev | | | | |
+| Cải thiện 2 | [Triển khai CP4: Hybrid + Metadata Filter] | Lọc metadata chỉ định năm + RRF | dev | | | | |
 | Cấu hình đã chọn | | | test | | | | |
-| Baseline | TF-IDF (Lexical), top-k=3, budget=800 | Đánh giá độc lập trên tập test | test | 4/5 (80.0%) | 4/5 (80.0%) | 4/5 (80.0%) | 6.92ms / $0 |
+| **Baseline (P1)** | TF-IDF Lexical, top-k=3, budget=800 | Đánh giá độc lập trên tập test | test | 4/5 (80.0%) | 4/5 (80.0%) | 4/5 (80.0%) | 4.36ms / $0 |
+| **Phương pháp 2 (P2)** | Dense ChromaDB (MiniLM-384d), top-k=3, budget=800 | Đánh giá độc lập trên tập test | test | 2/5 (40.0%) | 2/5 (40.0%) | 2/5 (40.0%) | 206.83ms / $0 |
+| **Phương pháp 3 (P3)** | Hybrid RRF (Dense + TF-IDF), k=60, top-k=3, budget=800 | Đánh giá độc lập trên tập test | test | 3/5 (60.0%) | 4/5 (80.0%) | 3/5 (60.0%) | 266.91ms / $0 |
 
-Một cấu hình có thể đồng thời là phương pháp mới và cải thiện; giải thích rõ. Báo `n/N` và tỷ lệ, ghi đơn vị thời gian/chi phí, so sánh test sau khi chốt. Nêu hai lỗi dev, nguyên nhân, cách thử và lý do chọn cấu hình:
+### Mô tả 3 Phương pháp Retrieval đã triển khai (Checkpoint 2)
+1. **Phương pháp 1 — TF-IDF Lexical Retrieval (Baseline):** Xây dựng bảng tần suất từ và nghịch đảo tần suất văn bản (TF-IDF) trên 1.047 chunks theo chuẩn hóa Unicode NFC. Truy vấn dựa trên độ tương đồng Cosine của vector thưa (sparse vector). Tốc độ cực nhanh (~4.64ms), nhận diện chính xác các từ khóa số liệu kỹ thuật, nhưng hạn chế khi câu hỏi sử dụng từ đồng nghĩa.
+2. **Phương pháp 2 — Dense Retrieval (ChromaDB + all-MiniLM-L6-v2):** Kết nối trực tiếp cơ sở dữ liệu vector từ Day 6 với 1.047 chunks đã nhúng vector 384 chiều. Sử dụng hàm nhúng `all-MiniLM-L6-v2` để sinh vector cho query câu hỏi và truy vấn Cosine similarity trong không gian HNSW. Bắt trúng ngữ nghĩa tổng quát và các cách diễn đạt lại (paraphrasing).
+3. **Phương pháp 3 — Hybrid Retrieval (Dense + Lexical kết hợp RRF):** Khởi chạy song song cả Dense Retriever và Lexical Retriever để lấy ra danh sách ứng viên (candidate pool $N=15$). Hợp nhất thứ hạng bằng thuật toán Reciprocal Rank Fusion:
+   $$RRF(d) = \frac{1}{60 + rank_{dense}(d)} + \frac{1}{60 + rank_{lexical}(d)}$$
+   Phương pháp này bù đắp điểm yếu của cả hai phía: vừa giữ được từ khóa độc nhất (tên riêng, số liệu) nhờ Lexical, vừa nắm bắt được ngữ nghĩa tổng quan nhờ Dense. Kết quả: Evidence Hit@3 đạt **14/15 (93.3%)** trên tập Dev và **4/5 (80.0%)** trên tập Test.
 
 ---
 
