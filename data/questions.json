@@ -1,0 +1,274 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "At which institution is the World Bank Group Guarantee Platform hosted? (Nền tảng bảo lãnh của Nhóm Ngân hàng Thế giới được đặt tại cơ quan nào?)",
+    "expected_answer": "Hosted at MIGA (Multilateral Investment Guarantee Agency).",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 4,
+        "evidence": "The World Bank Group Guarantee Platform, \nhosted at MIGA, continues to play a vital role in \nbringing private capital to emerging markets."
+      }
+    ]
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "What is the estimated cost of reconstruction needs for Ukraine's energy infrastructure? (Ước tính thiệt hại tái thiết cơ sở hạ tầng năng lượng Ukraine là bao nhiêu?)",
+    "expected_answer": "An estimated $91 billion in reconstruction needs.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 10,
+        "evidence": "Attacks to Ukraine’s energy infrastructure have created an estimated $91 billion \nin reconstruction needs."
+      }
+    ]
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "How many people do family farms in Brazil employ according to the 2024 report? (Các trang trại gia đình ở Brazil tạo việc làm cho bao nhiêu người?)",
+    "expected_answer": "Nearly 10 million people.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 11,
+        "evidence": "Brazil’s family farms employ nearly 10 million people and play a central \nrole in food production."
+      }
+    ]
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "question": "What proportion of Cabo Verde's GDP does the tourism sector account for? (Ngành du lịch đóng góp bao nhiêu phần trong GDP của Cabo Verde?)",
+    "expected_answer": "Over a quarter of GDP.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 13,
+        "evidence": "Tourism is an engine of Cabo Verde’s economy, accounting for over a \nquarter of GDP."
+      }
+    ]
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "How many jobs does India's National Green Hydrogen Mission aim to catalyze? (Chương trình Hydrogen xanh quốc gia của Ấn Độ nhằm tạo ra bao nhiêu việc làm?)",
+    "expected_answer": "Aims to catalyze 600,000 jobs.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 14,
+        "evidence": "Its National Green Hydrogen Mission, which aims to catalyze \n600,000 jobs"
+      }
+    ]
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "Why is water security essential for Jordan's economy according to the 2024 report? (Tại sao an ninh nguồn nước là cốt lõi cho kinh tế Jordan?)",
+    "expected_answer": "Water security is foundational for productivity and economic growth, especially in water-scarce Jordan.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 9,
+        "evidence": "Water security is foundational for productivity and economic growth. As one \nof the most water-scarce countries in the world, Jordan has struggled to"
+      }
+    ]
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "question": "What health crisis causes high rates of premature death and disability in Pacific Island countries? (Khủng hoảng y tế nào gây tử vong sớm ở các quốc đảo Thái Bình Dương?)",
+    "expected_answer": "Non-communicable diseases, including diabetes.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 12,
+        "evidence": "Pacific Island countries face some of the world’s highest rates of premature death and \ndisability from non-communicable disease, including diabetes,"
+      }
+    ]
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "What causes over 40 percent of greenhouse gas emissions in Indonesia? (Nguyên nhân gây ra hơn 40% lượng phát thải khí nhà kính tại Indonesia là gì?)",
+    "expected_answer": "Deforestation and fires that release carbon into the atmosphere.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2023",
+        "page": 31,
+        "evidence": "In Indonesia, more than 40 percent of the country’s emissions result from defor -\nestation and fires that release carbon into the atmosphere."
+      }
+    ]
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "question": "By what percentage can low-carbon development strategies reduce emissions without harming growth? (Chiến lược phát thải carbon thấp có thể giảm bao nhiêu % khí thải mà không hại tăng trưởng?)",
+    "expected_answer": "Can reduce emissions by 70 percent without harming growth.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2023",
+        "page": 14,
+        "evidence": "Collectively, the low-carbon development strategies from these reports can reduce \nemissions by 70 percent, without harming growth."
+      }
+    ]
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "question": "What was the devastating impact of Cyclone Freddy in Malawi reported in 2023? (Tác động tàn khốc của bão Cyclone Freddy tại Malawi được ghi nhận như thế nào?)",
+    "expected_answer": "Over 1,000 lives lost, hundreds of thousands displaced, and infrastructure damaged.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2023",
+        "page": 23,
+        "evidence": "With over 1,000 lives lost, hundreds of thousands displaced in camps, and roads, \nbridges, schools, hospitals, and powerlines damaged, Cyclone Freddy"
+      }
+    ]
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "What role does the World Bank serve regarding Financial Intermediary Funds (FIFs)? (Ngân hàng Thế giới đóng vai trò gì đối với các Quỹ FIFs?)",
+    "expected_answer": "The World Bank provides administrative support.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 26,
+        "evidence": "Financial intermediary funds (FIFs) represent large, \ndistinct, multi-partner financing arrangements, for \nwhich the World Bank provides administrative support."
+      }
+    ]
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "What are the 3 Pillars of the World Bank Group strategy in fiscal 2024? (3 trụ cột chiến lược của WB trong năm 2024 là gì?)",
+    "expected_answer": "Invest in foundational physical and human infrastructure; Support a business-enabling environment; Mobilize private capital at scale.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 7,
+        "evidence": "3 Pillars\nInvest in foundational physical \nand human infrastructure\nSupport a business-enabling \nenvironment with clear rules \nand regulations\nMobilize private capital \nat scale"
+      }
+    ],
+    "filter": {
+      "year": 2024
+    }
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "In the 2024 report, what milestone did MIGA surpass in cumulative guarantee issuance? (Mốc phát hành bảo lãnh tích lũy MIGA đã vượt qua là bao nhiêu?)",
+    "expected_answer": "Surpassed $100 billion in cumulative guarantee issuance since 1988.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 4,
+        "evidence": "The Board commends MIGA for surpassing \n$100 billion in cumulative guarantee issuance \nsince its founding in 1988"
+      }
+    ],
+    "filter": {
+      "year": 2024
+    }
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "question": "According to the 2023 report, how does gender equality impact development in Western and Central Africa? (Bình đẳng giới tác động thế nào tới phát triển ở Tây và Trung Phi năm 2023?)",
+    "expected_answer": "Essential for inclusive societies and accelerates progress from human capital to climate change.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2023",
+        "page": 27,
+        "evidence": "Gender equality is not only essential for building more inclusive societies, but it \ncan also accelerate progress in other areas of development, from improving human \ncapital and food security to addressing climate change"
+      }
+    ],
+    "filter": {
+      "year": 2023
+    }
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "question": "What intertwined crises are eroding hard-won development progress according to the 2023 President's message? (Những thách thức đan xen nào đang làm xói mòn tiến bộ phát triển năm 2023?)",
+    "expected_answer": "Poverty, pandemics, climate change, debt, conflict, food insecurity, and fragility.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2023",
+        "page": 9,
+        "evidence": "poverty, pandem-\nics, climate change, debt, \nconflict, food insecurity, and \nfragility—are eroding decades of hard-\nwon development progress"
+      }
+    ]
+  },
+  {
+    "id": "q16",
+    "split": "test",
+    "question": "Who was President of the World Bank Group and Chairman of the Board of Executive Directors in 2024? (Ai là Chủ tịch Nhóm Ngân hàng Thế giới năm 2024?)",
+    "expected_answer": "Ajay Banga.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 5,
+        "evidence": "Ajay Banga\nPresident of the World Bank Group \nChairman of the Board of Executive Directors"
+      }
+    ]
+  },
+  {
+    "id": "q17",
+    "split": "test",
+    "question": "Which groups are part of the vibrant ecosystem of civil society partners engaged with the World Bank Group in 2024? (Những nhóm nào nằm trong hệ sinh thái đối tác xã hội dân sự năm 2024?)",
+    "expected_answer": "Civil society, faith-based organizations, private sector, foundations, think tanks, academia, alumni, and youth.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 21,
+        "evidence": "The World Bank Group engages with a vibrant \necosystem of partners including civil society, faith-\nbased organizations, the private sector, foundations, \nthink tanks, academia, alumni, and youth."
+      }
+    ]
+  },
+  {
+    "id": "q18",
+    "split": "test",
+    "question": "What unprecedented confluence of crises did the world face in 2023, hitting developing countries hardest? (Khủng hoảng hội tụ nào tác động nặng nhất lên các nước đang phát triển năm 2023?)",
+    "expected_answer": "Climate change, inflation, conflict, and food insecurity.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2023",
+        "page": 7,
+        "evidence": "world is facing an unprecedented confluence of crises—including \nclimate change, inflation, conflict, and food insecurity—with develop-\ning countries hardest hit."
+      }
+    ]
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "question": "In the 2024 strategy numbers, what is the single overarching goal (1 GOAL) defined by the World Bank? (Mục tiêu 1 GOAL trong chiến lược 2024 là gì?)",
+    "expected_answer": "To create more and better-paid jobs.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 7,
+        "evidence": "1 GOAL\nTo create more and \nbetter-paid jobs"
+      }
+    ],
+    "filter": {
+      "year": 2024
+    }
+  },
+  {
+    "id": "q20",
+    "split": "test",
+    "question": "According to the 2023 report, how do Executive Directors view the status of climate action globally? (Ban Giám đốc Điều hành đánh giá vị thế của hành động vì khí hậu như thế nào năm 2023?)",
+    "expected_answer": "Climate action remains a crucial global priority.",
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2023",
+        "page": 11,
+        "evidence": "Climate action remains a crucial global priority. The Executive Directors wel -\ncome the efforts the Bank Group"
+      }
+    ]
+  }
+]

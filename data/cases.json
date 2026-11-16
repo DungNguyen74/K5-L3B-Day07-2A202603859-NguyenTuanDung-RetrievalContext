@@ -1,0 +1,194 @@
+[
+  {
+    "id": "q01",
+    "split": "dev",
+    "question": "At which institution is the World Bank Group Guarantee Platform hosted? (Nền tảng bảo lãnh của Nhóm Ngân hàng Thế giới được đặt tại cơ quan nào?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Hosted at MIGA (Multilateral Investment Guarantee Agency)."
+  },
+  {
+    "id": "q02",
+    "split": "dev",
+    "question": "What is the estimated cost of reconstruction needs for Ukraine's energy infrastructure? (Ước tính thiệt hại tái thiết cơ sở hạ tầng năng lượng Ukraine là bao nhiêu?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "An estimated $91 billion in reconstruction needs."
+  },
+  {
+    "id": "q03",
+    "split": "dev",
+    "question": "How many people do family farms in Brazil employ according to the 2024 report? (Các trang trại gia đình ở Brazil tạo việc làm cho bao nhiêu người?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Nearly 10 million people."
+  },
+  {
+    "id": "q04",
+    "split": "dev",
+    "question": "What proportion of Cabo Verde's GDP does the tourism sector account for? (Ngành du lịch đóng góp bao nhiêu phần trong GDP của Cabo Verde?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Over a quarter of GDP."
+  },
+  {
+    "id": "q05",
+    "split": "dev",
+    "question": "How many jobs does India's National Green Hydrogen Mission aim to catalyze? (Chương trình Hydrogen xanh quốc gia của Ấn Độ nhằm tạo ra bao nhiêu việc làm?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Aims to catalyze 600,000 jobs."
+  },
+  {
+    "id": "q06",
+    "split": "dev",
+    "question": "Why is water security essential for Jordan's economy according to the 2024 report? (Tại sao an ninh nguồn nước là cốt lõi cho kinh tế Jordan?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Water security is foundational for productivity and economic growth, especially in water-scarce Jordan."
+  },
+  {
+    "id": "q07",
+    "split": "dev",
+    "question": "What health crisis causes high rates of premature death and disability in Pacific Island countries? (Khủng hoảng y tế nào gây tử vong sớm ở các quốc đảo Thái Bình Dương?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Non-communicable diseases, including diabetes."
+  },
+  {
+    "id": "q08",
+    "split": "dev",
+    "question": "What causes over 40 percent of greenhouse gas emissions in Indonesia? (Nguyên nhân gây ra hơn 40% lượng phát thải khí nhà kính tại Indonesia là gì?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Deforestation and fires that release carbon into the atmosphere."
+  },
+  {
+    "id": "q09",
+    "split": "dev",
+    "question": "By what percentage can low-carbon development strategies reduce emissions without harming growth? (Chiến lược phát thải carbon thấp có thể giảm bao nhiêu % khí thải mà không hại tăng trưởng?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Can reduce emissions by 70 percent without harming growth."
+  },
+  {
+    "id": "q10",
+    "split": "dev",
+    "question": "What was the devastating impact of Cyclone Freddy in Malawi reported in 2023? (Tác động tàn khốc của bão Cyclone Freddy tại Malawi được ghi nhận như thế nào?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Over 1,000 lives lost, hundreds of thousands displaced, and infrastructure damaged."
+  },
+  {
+    "id": "q11",
+    "split": "dev",
+    "question": "What role does the World Bank serve regarding Financial Intermediary Funds (FIFs)? (Ngân hàng Thế giới đóng vai trò gì đối với các Quỹ FIFs?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "The World Bank provides administrative support."
+  },
+  {
+    "id": "q12",
+    "split": "dev",
+    "question": "What are the 3 Pillars of the World Bank Group strategy in fiscal 2024? (3 trụ cột chiến lược của WB trong năm 2024 là gì?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Invest in foundational physical and human infrastructure; Support a business-enabling environment; Mobilize private capital at scale."
+  },
+  {
+    "id": "q13",
+    "split": "dev",
+    "question": "In the 2024 report, what milestone did MIGA surpass in cumulative guarantee issuance? (Mốc phát hành bảo lãnh tích lũy MIGA đã vượt qua là bao nhiêu?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Surpassed $100 billion in cumulative guarantee issuance since 1988."
+  },
+  {
+    "id": "q14",
+    "split": "dev",
+    "question": "According to the 2023 report, how does gender equality impact development in Western and Central Africa? (Bình đẳng giới tác động thế nào tới phát triển ở Tây và Trung Phi năm 2023?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Essential for inclusive societies and accelerates progress from human capital to climate change."
+  },
+  {
+    "id": "q15",
+    "split": "dev",
+    "question": "What intertwined crises are eroding hard-won development progress according to the 2023 President's message? (Những thách thức đan xen nào đang làm xói mòn tiến bộ phát triển năm 2023?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Poverty, pandemics, climate change, debt, conflict, food insecurity, and fragility."
+  },
+  {
+    "id": "q16",
+    "split": "test",
+    "question": "Who was President of the World Bank Group and Chairman of the Board of Executive Directors in 2024? (Ai là Chủ tịch Nhóm Ngân hàng Thế giới năm 2024?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Ajay Banga."
+  },
+  {
+    "id": "q17",
+    "split": "test",
+    "question": "Which groups are part of the vibrant ecosystem of civil society partners engaged with the World Bank Group in 2024? (Những nhóm nào nằm trong hệ sinh thái đối tác xã hội dân sự năm 2024?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Civil society, faith-based organizations, private sector, foundations, think tanks, academia, alumni, and youth."
+  },
+  {
+    "id": "q18",
+    "split": "test",
+    "question": "What unprecedented confluence of crises did the world face in 2023, hitting developing countries hardest? (Khủng hoảng hội tụ nào tác động nặng nhất lên các nước đang phát triển năm 2023?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Climate change, inflation, conflict, and food insecurity."
+  },
+  {
+    "id": "q19",
+    "split": "test",
+    "question": "In the 2024 strategy numbers, what is the single overarching goal (1 GOAL) defined by the World Bank? (Mục tiêu 1 GOAL trong chiến lược 2024 là gì?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "To create more and better-paid jobs."
+  },
+  {
+    "id": "q20",
+    "split": "test",
+    "question": "According to the 2023 report, how do Executive Directors view the status of climate action globally? (Ban Giám đốc Điều hành đánh giá vị thế của hành động vì khí hậu như thế nào năm 2023?)",
+    "answerable": true,
+    "expected_behavior": "search_and_answer",
+    "expected_answer": "Climate action remains a crucial global priority."
+  },
+  {
+    "id": "q_unans_dev_01",
+    "split": "dev",
+    "question": "What was the exact financial contribution of the Asian Development Bank (ADB) to the World Bank's 2024 Clean Energy Fund? (Đóng góp tài chính chính xác của Ngân hàng Phát triển Châu Á (ADB) vào Quỹ Năng lượng Sạch 2024 của Ngân hàng Thế giới là bao nhiêu?)",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo Thường niên WB 2024 và 2023 không ghi nhận bất kỳ quỹ nào có tên '2024 Clean Energy Fund' có phần đóng góp tài chính riêng lẻ của ADB (chỉ có báo cáo hoạt động chung của các cơ quan WBG)."
+  },
+  {
+    "id": "q_unans_dev_02",
+    "split": "dev",
+    "question": "What is the projected GDP growth rate of Vietnam for the fiscal year 2027 reported in the 2023 Annual Report? (Dự báo tốc độ tăng trưởng GDP của Việt Nam cho năm tài chính 2027 được báo cáo trong Báo cáo Thường niên 2023 là bao nhiêu?)",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo Thường niên 2023 chỉ công bố số liệu tổng kết đến năm tài khóa 2023 và một số dự báo ngắn hạn đến 2024-2025 cho các khu vực kinh tế lớn, hoàn toàn không có dự báo số liệu GDP cụ thể cho Việt Nam đến năm 2027."
+  },
+  {
+    "id": "q_unans_test_01",
+    "split": "test",
+    "question": "According to the 2024 report, what is the personal annual salary and bonus of President Ajay Banga? (Theo báo cáo năm 2024, mức lương và tiền thưởng hàng năm của Chủ tịch Ajay Banga là bao nhiêu?)",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "Báo cáo Thường niên World Bank 2024 chỉ trình bày các cam kết tài trợ, chương trình phát triển và thư ngỏ của Chủ tịch, không công bố thông tin thu nhập cá nhân hay gói lương thưởng của Ban Giám đốc."
+  },
+  {
+    "id": "q_unans_test_02",
+    "split": "test",
+    "question": "What is the total number of commercial bank branches opened in Antarctica under the World Bank polar development initiative in 2023? (Tổng số chi nhánh ngân hàng thương mại được mở tại Nam Cực theo sáng kiến phát triển vùng cực của World Bank năm 2023 là bao nhiêu?)",
+    "answerable": false,
+    "expected_behavior": "search_and_abstain",
+    "absence_reason": "World Bank Group không có bất kỳ sáng kiến hay dự án phát triển nào tại Nam Cực (Antarctica); hai báo cáo tài chính 2023 & 2024 hoàn toàn không có dữ liệu về vùng cực này."
+  }
+]
