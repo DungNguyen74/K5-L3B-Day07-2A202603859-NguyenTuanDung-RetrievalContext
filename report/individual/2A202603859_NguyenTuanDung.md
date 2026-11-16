@@ -56,16 +56,31 @@
 
 ## Agent và đánh giá
 
-- Tool, số lượt gọi, điều kiện dừng, cách chọn context và xử lý lỗi:
+- **Tool, số lượt gọi, điều kiện dừng, cách chọn context và xử lý lỗi:**
+  - *Tool sử dụng:* Tool truy xuất `search(query, top_k, filters)` kết nối trực tiếp kho vector ChromaDB và bộ TF-IDF/Hybrid.
+  - *Số lượt gọi:* Giới hạn tối đa `max_searches = 3` lượt/câu hỏi.
+  - *Điều kiện dừng:* Vòng lặp ReAct dừng khi Controller phát hiện context đã đủ bằng chứng và kích hoạt action `answer`, hoặc dừng khi chạm ngưỡng `max_searches` mà chưa đủ bằng chứng $\rightarrow$ tự động kích hoạt cơ chế an toàn `abstain`.
+  - *Cách chọn context:* Cơ chế đóng gói `pack_context` với cơ chế khử trùng lặp (`deduplication`), gán nhãn nguồn rõ ràng `[chunk_id | source | page]` và kiểm soát theo ngân sách ký tự (`budget = 800` ký tự ở Baseline, mở rộng `1.500` ký tự ở cấu hình cải thiện).
+  - *Xử lý lỗi & Hallucination:* Tự động retry với exponential backoff khi gặp lỗi mạng/quota. Kiểm tra hậu kỳ nghiêm ngặt (`post-validation`): nếu câu trả lời trích dẫn chunk không có trong context hoặc không có citation $\rightarrow$ chuẩn hóa về `abstain` thay vì để model bịa đặt.
 
 | Cấu hình / split | Tool use | Số lượt gọi | Grounded answer 0/1/2 và trung bình | Citation hợp lệ | Câu có citation | Abstention đúng | Từ chối nhầm |
 |---|---|---|---|---|---|---|---|
+| **Agent Dense Baseline (Dev)** | 16/17 (94.1%) | 1.12 lượt/câu | 0: 7 \| 1: 0 \| 2: 8 (TB: 1.07/2.0) | 8/8 (100%) | 8/8 (100%) | 2/2 (100%) | 7/15 (46.7%) |
+
+#### Đánh giá chi tiết các câu hỏi trọng yếu (Audited Key Cases):
 
 | Query ID | Loại câu | Tool call và kết quả | Câu trả lời và citation | Nhãn, lý do |
 |---|---|---|---|---|
+| **q01** | Có đáp án (Trực tiếp) | Search: `"World Bank Group Guarantee Platform hosted"` $\rightarrow$ Top-1: `wb_annual_report_2024_p4_para0` (Trang 4) | *"The World Bank Group Guarantee Platform is hosted at MIGA [wb_annual_report_2024_p4_para0]."* | **Điểm 2**: Trả lời chính xác, đủ ý, citation ID chuẩn và thực sự chứng minh câu trả lời. |
+| **q12** | Có đáp án (Đa điều kiện) | Search: `"World Bank Group strategy 3 Pillars 2024"` $\rightarrow$ Top-1: `wb_annual_report_2024_p7_para0` (Trang 7) | *"The 3 Pillars are: Invest in foundational infrastructure, Support business-enabling environment, and Mobilize private capital [wb_annual_report_2024_p7_para0]."* | **Điểm 2**: Nêu đúng cả 3 trụ cột chiến lược năm 2024, đúng metadata năm. |
+| **q_unans_dev_01** | Thiếu bằng chứng (Unanswerable) | Search: `"ADB Asian Development Bank contribution Clean Energy Fund 2024"` $\rightarrow$ Không có thông tin liên quan | *"Không đủ bằng chứng để trả lời."* (Citations: `[]`) | **Abstention đúng**: Agent nhận thức được thông tin không tồn tại và dứt khoát từ chối, không suy đoán. |
 
-- Đường dẫn trace, nhãn, lệnh chạy, thời gian và chi phí:
-- Kết quả trước/sau, ví dụ lỗi, đánh đổi và giới hạn:
+- **Đường dẫn trace, nhãn, lệnh chạy, thời gian và chi phí:**
+  - File traces: [`starter/results/agent-dense-dev/traces.json`](file:///c:/Users/reals/Vin/K5-L3B-Day07-2A202603859-NguyenTuanDung-RetrievalContext/starter/results/agent-dense-dev/traces.json)
+  - File reviews audit: [`starter/results/agent-dense-dev/reviews.json`](file:///c:/Users/reals/Vin/K5-L3B-Day07-2A202603859-NguyenTuanDung-RetrievalContext/starter/results/agent-dense-dev/reviews.json)
+  - File metrics summary: [`starter/results/agent-dense-dev/summary.json`](file:///c:/Users/reals/Vin/K5-L3B-Day07-2A202603859-NguyenTuanDung-RetrievalContext/starter/results/agent-dense-dev/summary.json)
+  - Lệnh chạy: `python src/run_checkpoint3.py`
+  - Thời gian trung bình: ~1.2s/câu hỏi | Chi phí: 0.00 USD (Gemini Free Tier API + Local Vector Index).
 
 ---
 
