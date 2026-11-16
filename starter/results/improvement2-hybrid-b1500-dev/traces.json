@@ -1,0 +1,1466 @@
+[
+  {
+    "query_id": "q01",
+    "split": "dev",
+    "question": "At which institution is the World Bank Group Guarantee Platform hosted? (Nền tảng bảo lãnh của Nhóm Ngân hàng Thế giới được đặt tại cơ quan nào?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 4,
+        "evidence": "The World Bank Group Guarantee Platform, \nhosted at MIGA, continues to play a vital role in \nbringing private capital to emerging markets."
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2024_p4_para0",
+        "text": "The World Bank Group Guarantee Platform, \nhosted at MIGA, continues to play a vital role in \nbringing private capital to emerging markets. The Board commends MIGA for surpassing \n$100 billion in cumulative guarantee issuance \nsince its founding in 1988, a remarkable \nachievement from just $366 million in paid-in \ncapital. In addition, in fiscal 2026, the World Bank \nGroup surpassed its goal of $20 billion in annual \nguarantee issuance — four years ahead of the \n2030 target.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 4,
+        "metadata": {
+          "page": 4,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "institution": "WBG",
+          "chunk_index": 0,
+          "document_id": "wb_annual_report_2024",
+          "year": 2024,
+          "chunk_strategy": "by_paragraph",
+          "chunk_id": "wb_annual_report_2024_p4_para0",
+          "physical_page": 4,
+          "char_count": 7465
+        },
+        "score": 0.03278688524590164,
+        "distance": 0.34137386083602905,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2024_p3_para1",
+        "text": "• International Finance Corporation (IFC), \nwhich mobilizes private capital at scale, supports businesses from \nmicroenterprises to large corporations, and creates jobs that drive economic \ngrowth and opportunity. • Multilateral Investment Guarantee Agency (MIGA), \nwhich houses the World Bank Group Guarantee Platform, providing \nguarantees to mobilize private capital for developing countries. • International Centre for Settlement of Investment Disputes (ICSID), \nwhich provides international facilities for conciliation, mediation, and \narbitration of investment disputes.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 3,
+        "metadata": {
+          "page": 3,
+          "document_id": "wb_annual_report_2024",
+          "physical_page": 3,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "char_count": 1756,
+          "chunk_id": "wb_annual_report_2024_p3_para1",
+          "chunk_index": 1,
+          "chunk_strategy": "by_paragraph",
+          "institution": "WBG",
+          "year": 2024
+        },
+        "score": 0.03128054740957967,
+        "distance": 0.4490688443183899,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2024_p6_para5",
+        "text": "9\nTHE WORLD BANK GROUP ANNUAL REPORT 20268\nTHE WORLD BANK GROUP ANNUAL REPORT 2026",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 6,
+        "metadata": {
+          "document_id": "wb_annual_report_2024",
+          "institution": "WBG",
+          "year": 2024,
+          "physical_page": 6,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "chunk_id": "wb_annual_report_2024_p6_para5",
+          "char_count": 2507,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index": 5,
+          "page": 6
+        },
+        "score": 0.02900988017658188,
+        "distance": 0.45984965562820435,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2024_p4_para0 | data/world_bank_annual_report_2024.pdf | page 4]\nThe World Bank Group Guarantee Platform, \nhosted at MIGA, continues to play a vital role in \nbringing private capital to emerging markets. The Board commends MIGA for surpassing \n$100 billion in cumulative guarantee issuance \nsince its founding in 1988, a remarkable \nachievement from just $366 million in paid-in \ncapital. In addition, in fiscal 2026, the World Bank \nGroup surpassed its goal of $20 billion in annual \nguarantee issuance — four years ahead of the \n2030 target.\n\n[wb_annual_report_2024_p3_para1 | data/world_bank_annual_report_2024.pdf | page 3]\n• International Finance Corporation (IFC), \nwhich mobilizes private capital at scale, supports businesses from \nmicroenterprises to large corporations, and creates jobs that drive economic \ngrowth and opportunity. • Multilateral Investment Guarantee Agency (MIGA), \nwhich houses the World Bank Group Guarantee Platform, providing \nguarantees to mobilize private capital for developing countries. • International Centre for Settlement of Investment Disputes (ICSID), \nwhich provides international facilities for conciliation, mediation, and \narbitration of investment disputes.\n\n[wb_annual_report_2024_p6_para5 | data/world_bank_annual_report_2024.pdf | page 6]\n9\nTHE WORLD BANK GROUP ANNUAL REPORT 20268\nTHE WORLD BANK GROUP ANNUAL REPORT 2026",
+    "context_ids": [
+      "wb_annual_report_2024_p4_para0",
+      "wb_annual_report_2024_p3_para1",
+      "wb_annual_report_2024_p6_para5"
+    ],
+    "context_chars": 1389,
+    "elapsed_ms": 326.84739999240264,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q02",
+    "split": "dev",
+    "question": "What is the estimated cost of reconstruction needs for Ukraine's energy infrastructure? (Ước tính thiệt hại tái thiết cơ sở hạ tầng năng lượng Ukraine là bao nhiêu?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 10,
+        "evidence": "Attacks to Ukraine’s energy infrastructure have created an estimated $91 billion \nin reconstruction needs."
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2023_p35_para4",
+        "text": "In March, the World Bank released the updated Rapid Damage and Needs \nAssessment for Ukraine, which emphasized the need for both public and private \nfunds to address an estimated $411 billion in reconstruction and recovery costs over \nthe next 10 years. The highest estimated needs are in transport, housing, energy, \nsocial protection and livelihoods, explosive-hazard management, and agriculture.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 35,
+        "metadata": {
+          "document_id": "wb_annual_report_2023",
+          "char_count": 3821,
+          "chunk_id": "wb_annual_report_2023_p35_para4",
+          "page": 35,
+          "chunk_strategy": "by_paragraph",
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "physical_page": 35,
+          "chunk_index": 4,
+          "institution": "WBG",
+          "year": 2023
+        },
+        "score": 0.03252247488101534,
+        "distance": 0.3228393793106079,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2024_p10_para0",
+        "text": "Attacks to Ukraine’s energy infrastructure have created an estimated $91 billion \nin reconstruction needs. The World Bank Group is supporting the Government of \nUkraine to develop a European Union (EU)-aligned energy sector strategy to restore \nsecurity of supply, reestablish financial viability, mobilize private capital at scale, \nstrengthen corporate governance of state energy companies, and improve financial \nsustainability — essential ingredients for economic competitiveness, productivity, and \nemployment creation.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 10,
+        "metadata": {
+          "physical_page": 10,
+          "char_count": 2678,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "year": 2024,
+          "chunk_index": 0,
+          "chunk_strategy": "by_paragraph",
+          "page": 10,
+          "document_id": "wb_annual_report_2024",
+          "institution": "WBG",
+          "chunk_id": "wb_annual_report_2024_p10_para0"
+        },
+        "score": 0.03252247488101534,
+        "distance": 0.38911598920822144,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2023_p56_para0",
+        "text": "52 THE WORLD BANK ANNUAL REPORT 2023\nEnsuring access to sustainable energy for all \nEnergy-related emissions account for over 75 percent of global emissions. The war on \nUkraine has led to volatile energy prices and supply worldwide, particularly affecting \nthe poorest countries. This crisis has highlighted the urgent need to deploy renew-\nable energy on a massive scale to mitigate climate change and ensure energy reliabil-\nity and security. T echnological advances have greatly reduced the cost of renewable \nenergy, presenting an opportunity to increase its share in the global energy mix.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 56,
+        "metadata": {
+          "document_id": "wb_annual_report_2023",
+          "institution": "WBG",
+          "page": 56,
+          "chunk_id": "wb_annual_report_2023_p56_para0",
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "year": 2023,
+          "physical_page": 56,
+          "chunk_index": 0,
+          "chunk_strategy": "by_paragraph",
+          "char_count": 2616
+        },
+        "score": 0.03007688828584351,
+        "distance": 0.4840657711029053,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2023_p35_para4 | data/world_bank_annual_report_2023.pdf | page 35]\nIn March, the World Bank released the updated Rapid Damage and Needs \nAssessment for Ukraine, which emphasized the need for both public and private \nfunds to address an estimated $411 billion in reconstruction and recovery costs over \nthe next 10 years. The highest estimated needs are in transport, housing, energy, \nsocial protection and livelihoods, explosive-hazard management, and agriculture.\n\n[wb_annual_report_2024_p10_para0 | data/world_bank_annual_report_2024.pdf | page 10]\nAttacks to Ukraine’s energy infrastructure have created an estimated $91 billion \nin reconstruction needs. The World Bank Group is supporting the Government of \nUkraine to develop a European Union (EU)-aligned energy sector strategy to restore \nsecurity of supply, reestablish financial viability, mobilize private capital at scale, \nstrengthen corporate governance of state energy companies, and improve financial \nsustainability — essential ingredients for economic competitiveness, productivity, and \nemployment creation.",
+    "context_ids": [
+      "wb_annual_report_2023_p35_para4",
+      "wb_annual_report_2024_p10_para0"
+    ],
+    "context_chars": 1094,
+    "elapsed_ms": 331.4304999948945,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q03",
+    "split": "dev",
+    "question": "How many people do family farms in Brazil employ according to the 2024 report? (Các trang trại gia đình ở Brazil tạo việc làm cho bao nhiêu người?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 11,
+        "evidence": "Brazil’s family farms employ nearly 10 million people and play a central \nrole in food production."
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2024_p11_para3",
+        "text": "Our strategy \nunlocks the knowledge, capital, and political will to seize that potential. GROWING \nBRAZIL’S \nAGRIBUSINESS \nSECTOR\n1M \nFAMILY FARMS IN \nBRAZIL WILL RECEIVE \nOUR SUPPORT BY 2030\n19\nTHE WORLD BANK GROUP ANNUAL REPORT 202618\nTHE WORLD BANK GROUP ANNUAL REPORT 2026",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 11,
+        "metadata": {
+          "physical_page": 11,
+          "chunk_strategy": "by_paragraph",
+          "char_count": 1797,
+          "document_id": "wb_annual_report_2024",
+          "chunk_id": "wb_annual_report_2024_p11_para3",
+          "year": 2024,
+          "institution": "WBG",
+          "page": 11,
+          "chunk_index": 3,
+          "source": "data/world_bank_annual_report_2024.pdf"
+        },
+        "score": 0.03278688524590164,
+        "distance": 0.3599352240562439,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2024_p11_para0",
+        "text": "Brazil’s family farms employ nearly 10 million people and play a central \nrole in food production. Our partnership with the government, launched \nin fiscal 2026, aims to support 1 million family farms with improved \ntechnology, market logistics, and insurance by 2030. This partnership is part of the World Bank Group’s strategic priority \nthat aims to move 300 million farmers from subsistence to surplus. Our three-pillar strategy leverages the World Bank Group’s unique \ncapabilities.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 11,
+        "metadata": {
+          "document_id": "wb_annual_report_2024",
+          "year": 2024,
+          "physical_page": 11,
+          "institution": "WBG",
+          "page": 11,
+          "chunk_id": "wb_annual_report_2024_p11_para0",
+          "char_count": 1797,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "chunk_strategy": "by_paragraph",
+          "chunk_index": 0
+        },
+        "score": 0.03225806451612903,
+        "distance": 0.388278603553772,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2024_p11_para2",
+        "text": "With this approach, we’ll create an integrated pathway for family \nfarms to access markets, finance, technology, and resilience tools. We’re working quickly because family farms around the world, including \n500 million smallholder farmers, produce most of the world’s food, \nyet many remain in poverty, relying on traditional farming methods \nand lacking access to markets, finance, and technology. Supporting \nthem to become commercially successful is critical to creating jobs, \nreducing poverty, and improving global food security.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 11,
+        "metadata": {
+          "chunk_id": "wb_annual_report_2024_p11_para2",
+          "year": 2024,
+          "chunk_index": 2,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "char_count": 1797,
+          "physical_page": 11,
+          "institution": "WBG",
+          "chunk_strategy": "by_paragraph",
+          "page": 11,
+          "document_id": "wb_annual_report_2024"
+        },
+        "score": 0.030798389007344232,
+        "distance": 0.5748257637023926,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2024_p11_para3 | data/world_bank_annual_report_2024.pdf | page 11]\nOur strategy \nunlocks the knowledge, capital, and political will to seize that potential. GROWING \nBRAZIL’S \nAGRIBUSINESS \nSECTOR\n1M \nFAMILY FARMS IN \nBRAZIL WILL RECEIVE \nOUR SUPPORT BY 2030\n19\nTHE WORLD BANK GROUP ANNUAL REPORT 202618\nTHE WORLD BANK GROUP ANNUAL REPORT 2026\n\n[wb_annual_report_2024_p11_para0 | data/world_bank_annual_report_2024.pdf | page 11]\nBrazil’s family farms employ nearly 10 million people and play a central \nrole in food production. Our partnership with the government, launched \nin fiscal 2026, aims to support 1 million family farms with improved \ntechnology, market logistics, and insurance by 2030. This partnership is part of the World Bank Group’s strategic priority \nthat aims to move 300 million farmers from subsistence to surplus. Our three-pillar strategy leverages the World Bank Group’s unique \ncapabilities.",
+    "context_ids": [
+      "wb_annual_report_2024_p11_para3",
+      "wb_annual_report_2024_p11_para0"
+    ],
+    "context_chars": 935,
+    "elapsed_ms": 330.89680000557564,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q04",
+    "split": "dev",
+    "question": "What proportion of Cabo Verde's GDP does the tourism sector account for? (Ngành du lịch đóng góp bao nhiêu phần trong GDP của Cabo Verde?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 13,
+        "evidence": "Tourism is an engine of Cabo Verde’s economy, accounting for over a \nquarter of GDP."
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2024_p13_para4",
+        "text": "The results are reshaping Cabo Verde’s tourism landscape. Average daily \ntourist spending and overnight stays in previously under-visited islands \nare both rising, and growing private investment signals confidence in the \ncountry’s trajectory. With the World Bank Group supporting the full arc from \ngovernance and infrastructure to skills and private finance, Cabo Verde is \nbuilding a more diversified, sustainable, and job-rich tourism economy.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 13,
+        "metadata": {
+          "physical_page": 13,
+          "chunk_id": "wb_annual_report_2024_p13_para4",
+          "chunk_strategy": "by_paragraph",
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "document_id": "wb_annual_report_2024",
+          "char_count": 2729,
+          "chunk_index": 4,
+          "year": 2024,
+          "institution": "WBG",
+          "page": 13
+        },
+        "score": 0.03252247488101534,
+        "distance": 0.30751699209213257,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2024_p13_para5",
+        "text": "UNLOCKING TOURISM’S \nFULL POTENTIAL \nIN CABO VERDE\nJOBS IN CABO \nVERDE HAVE \nRESULTED FROM \nOUR INVESTMENTS\n23,900 \n23\nTHE WORLD BANK GROUP ANNUAL REPORT 202622\nTHE WORLD BANK GROUP ANNUAL REPORT 2026",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 13,
+        "metadata": {
+          "char_count": 2729,
+          "year": 2024,
+          "chunk_index": 5,
+          "institution": "WBG",
+          "physical_page": 13,
+          "chunk_strategy": "by_paragraph",
+          "chunk_id": "wb_annual_report_2024_p13_para5",
+          "document_id": "wb_annual_report_2024",
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "page": 13
+        },
+        "score": 0.032266458495966696,
+        "distance": 0.36018651723861694,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2024_p13_para0",
+        "text": "Tourism is an engine of Cabo Verde’s economy, accounting for over a \nquarter of GDP. But for years, the sector has been constrained by a narrow \nmodel dominated by all-inclusive resorts in only two of the archipelago’s \n10 islands, with few links to local businesses. Infrastructure deficits, a \nshortage of skilled hospitality workers, and the absence of a coherent \nframework for attracting quality investment left the country exposed and \nits potential unrealized.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 13,
+        "metadata": {
+          "year": 2024,
+          "chunk_index": 0,
+          "chunk_strategy": "by_paragraph",
+          "physical_page": 13,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "institution": "WBG",
+          "chunk_id": "wb_annual_report_2024_p13_para0",
+          "page": 13,
+          "char_count": 2729,
+          "document_id": "wb_annual_report_2024"
+        },
+        "score": 0.03200204813108039,
+        "distance": 0.3163136839866638,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      }
+    ],
+    "context": "[wb_annual_report_2024_p13_para4 | data/world_bank_annual_report_2024.pdf | page 13]\nThe results are reshaping Cabo Verde’s tourism landscape. Average daily \ntourist spending and overnight stays in previously under-visited islands \nare both rising, and growing private investment signals confidence in the \ncountry’s trajectory. With the World Bank Group supporting the full arc from \ngovernance and infrastructure to skills and private finance, Cabo Verde is \nbuilding a more diversified, sustainable, and job-rich tourism economy.\n\n[wb_annual_report_2024_p13_para5 | data/world_bank_annual_report_2024.pdf | page 13]\nUNLOCKING TOURISM’S \nFULL POTENTIAL \nIN CABO VERDE\nJOBS IN CABO \nVERDE HAVE \nRESULTED FROM \nOUR INVESTMENTS\n23,900 \n23\nTHE WORLD BANK GROUP ANNUAL REPORT 202622\nTHE WORLD BANK GROUP ANNUAL REPORT 2026\n\n[wb_annual_report_2024_p13_para0 | data/world_bank_annual_report_2024.pdf | page 13]\nTourism is an engine of Cabo Verde’s economy, accounting for over a \nquarter of GDP. But for years, the sector has been constrained by a narrow \nmodel dominated by all-inclusive resorts in only two of the archipelago’s \n10 islands, with few links to local businesses. Infrastructure deficits, a \nshortage of skilled hospitality workers, and the absence of a coherent \nframework for attracting quality investment left the country exposed and \nits potential unrealized.",
+    "context_ids": [
+      "wb_annual_report_2024_p13_para4",
+      "wb_annual_report_2024_p13_para5",
+      "wb_annual_report_2024_p13_para0"
+    ],
+    "context_chars": 1373,
+    "elapsed_ms": 316.17420000839047,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q05",
+    "split": "dev",
+    "question": "How many jobs does India's National Green Hydrogen Mission aim to catalyze? (Chương trình Hydrogen xanh quốc gia của Ấn Độ nhằm tạo ra bao nhiêu việc làm?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 14,
+        "evidence": "Its National Green Hydrogen Mission, which aims to catalyze \n600,000 jobs"
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2024_p14_para0",
+        "text": "India aspires to become an upper-middle-income economy in the next \ndecade. Its National Green Hydrogen Mission, which aims to catalyze \n600,000 jobs by 2030, is critical to meeting this goal. Since 2021, the World Bank Group has helped India advance \nhydrogen hub planning, enabling infrastructure, and public-private \nengagement to mobilize private sector investment. In fiscal 2026, IFC \ninvested $25 million in Hygenco Green Energies — its first direct green \nhydrogen investment in India.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 14,
+        "metadata": {
+          "year": 2024,
+          "chunk_id": "wb_annual_report_2024_p14_para0",
+          "institution": "WBG",
+          "physical_page": 14,
+          "document_id": "wb_annual_report_2024",
+          "chunk_index": 0,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "char_count": 1536,
+          "page": 14,
+          "chunk_strategy": "by_paragraph"
+        },
+        "score": 0.03278688524590164,
+        "distance": 0.3505452871322632,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2024_p14_para2",
+        "text": "This follows two previous financing commitments from the World \nBank, totaling $3 billion, to help India accelerate the development \nof low-carbon energy. By promoting the development of a vibrant \nmarket for green hydrogen, the World Bank Group is helping to create \njobs, strengthen India’s manufacturing base, and support long-term \neconomic growth. ADVANCING \nVALUE-ADDED \nMANUFACTURING \nIN INDIA\n1,000\nJOBS IN INDIA WILL \nBE SUPPORTED BY \nOUR FINANCING\n25\nTHE WORLD BANK GROUP ANNUAL REPORT 202624\nTHE WORLD BANK GROUP ANNUAL REPORT 2026",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 14,
+        "metadata": {
+          "char_count": 1536,
+          "document_id": "wb_annual_report_2024",
+          "chunk_index": 2,
+          "physical_page": 14,
+          "chunk_strategy": "by_paragraph",
+          "chunk_id": "wb_annual_report_2024_p14_para2",
+          "page": 14,
+          "institution": "WBG",
+          "year": 2024,
+          "source": "data/world_bank_annual_report_2024.pdf"
+        },
+        "score": 0.03200204813108039,
+        "distance": 0.37475264072418213,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2023_p57_para0",
+        "text": "W ORKING TO ACHIEVE DEVELOPMENT GOALS 53 \nin farms. The Bank’s mini-grid portfolio of over $1.4 billion is supporting more than \n3,000 mini-grids in 30 countries to bring electricity to more than 13 million people \nby 2029. Clean hydrogen—produced using renewable energy or processes with low \ngas emissions—can further decarbonize sectors and create green jobs. In 2022, the \nBank launched the Hydrogen for Development Partnership to catalyze financing for \nhydrogen investments in developing countries.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 57,
+        "metadata": {
+          "page": 57,
+          "physical_page": 57,
+          "chunk_id": "wb_annual_report_2023_p57_para0",
+          "chunk_index": 0,
+          "institution": "WBG",
+          "char_count": 2660,
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "year": 2023,
+          "chunk_strategy": "by_paragraph",
+          "document_id": "wb_annual_report_2023"
+        },
+        "score": 0.031754032258064516,
+        "distance": 0.5376823544502258,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2024_p14_para0 | data/world_bank_annual_report_2024.pdf | page 14]\nIndia aspires to become an upper-middle-income economy in the next \ndecade. Its National Green Hydrogen Mission, which aims to catalyze \n600,000 jobs by 2030, is critical to meeting this goal. Since 2021, the World Bank Group has helped India advance \nhydrogen hub planning, enabling infrastructure, and public-private \nengagement to mobilize private sector investment. In fiscal 2026, IFC \ninvested $25 million in Hygenco Green Energies — its first direct green \nhydrogen investment in India.\n\n[wb_annual_report_2024_p14_para2 | data/world_bank_annual_report_2024.pdf | page 14]\nThis follows two previous financing commitments from the World \nBank, totaling $3 billion, to help India accelerate the development \nof low-carbon energy. By promoting the development of a vibrant \nmarket for green hydrogen, the World Bank Group is helping to create \njobs, strengthen India’s manufacturing base, and support long-term \neconomic growth. ADVANCING \nVALUE-ADDED \nMANUFACTURING \nIN INDIA\n1,000\nJOBS IN INDIA WILL \nBE SUPPORTED BY \nOUR FINANCING\n25\nTHE WORLD BANK GROUP ANNUAL REPORT 202624\nTHE WORLD BANK GROUP ANNUAL REPORT 2026",
+    "context_ids": [
+      "wb_annual_report_2024_p14_para0",
+      "wb_annual_report_2024_p14_para2"
+    ],
+    "context_chars": 1207,
+    "elapsed_ms": 326.46890002069995,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q06",
+    "split": "dev",
+    "question": "Why is water security essential for Jordan's economy according to the 2024 report? (Tại sao an ninh nguồn nước là cốt lõi cho kinh tế Jordan?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 9,
+        "evidence": "Water security is foundational for productivity and economic growth. As one \nof the most water-scarce countries in the world, Jordan has struggled to"
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2024_p9_para0",
+        "text": "Water security is foundational for productivity and economic growth. As one \nof the most water-scarce countries in the world, Jordan has struggled to grow \nits economy and create jobs for its young people. The government of Jordan is taking bold action to boost water security by \ninitiating its largest-ever infrastructure project, the Aqaba-Amman Water \nDesalination and Conveyance Project. By 2030, the project is expected \nto deliver approximately 40 percent of Jordan’s domestic water supply.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 9,
+        "metadata": {
+          "institution": "WBG",
+          "year": 2024,
+          "document_id": "wb_annual_report_2024",
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "page": 9,
+          "chunk_strategy": "by_paragraph",
+          "physical_page": 9,
+          "chunk_index": 0,
+          "char_count": 1806,
+          "chunk_id": "wb_annual_report_2024_p9_para0"
+        },
+        "score": 0.03278688524590164,
+        "distance": 0.2260040044784546,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2024_p9_para2",
+        "text": "Complementing the Aqaba-Amman project is IBRD’s $300 million Jordan \nWater Sector Efficiency Project, which includes financing from partners. This \nis strengthening Jordan’s broader water sector through non-revenue water \nreduction, energy efficiency, and distribution-system readiness. The World Bank Group’s support for Jordan’s water sector aligns with our \nWater Strategy Implementation Plan, which outlines how investments, \nlong-term policy reforms, and institutional sustainability can deliver water \nsecurity, economic growth, and job creation.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 9,
+        "metadata": {
+          "institution": "WBG",
+          "chunk_id": "wb_annual_report_2024_p9_para2",
+          "char_count": 1806,
+          "document_id": "wb_annual_report_2024",
+          "physical_page": 9,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "page": 9,
+          "year": 2024,
+          "chunk_index": 2,
+          "chunk_strategy": "by_paragraph"
+        },
+        "score": 0.03225806451612903,
+        "distance": 0.2990074157714844,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2023_p68_para0",
+        "text": "64 THE WORLD BANK ANNUAL REPORT 2023\nEnsuring water security for people and the planet\nT oday, over 2 billion people lack safe drinking water, 3.6 billion people lack safe san-\nitation, and at least 1.8 billion people face significant flood risk. With 70 percent of \nthe world’s water shared across national boundaries and the variability of trans -\nboundary water resources due to climate change, risks of water-induced conflicts \nare escalating.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 68,
+        "metadata": {
+          "physical_page": 68,
+          "char_count": 2796,
+          "year": 2023,
+          "page": 68,
+          "chunk_index": 0,
+          "institution": "WBG",
+          "chunk_id": "wb_annual_report_2023_p68_para0",
+          "chunk_strategy": "by_paragraph",
+          "document_id": "wb_annual_report_2023",
+          "source": "data/world_bank_annual_report_2023.pdf"
+        },
+        "score": 0.030536130536130537,
+        "distance": 0.46737444400787354,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2024_p9_para0 | data/world_bank_annual_report_2024.pdf | page 9]\nWater security is foundational for productivity and economic growth. As one \nof the most water-scarce countries in the world, Jordan has struggled to grow \nits economy and create jobs for its young people. The government of Jordan is taking bold action to boost water security by \ninitiating its largest-ever infrastructure project, the Aqaba-Amman Water \nDesalination and Conveyance Project. By 2030, the project is expected \nto deliver approximately 40 percent of Jordan’s domestic water supply.\n\n[wb_annual_report_2024_p9_para2 | data/world_bank_annual_report_2024.pdf | page 9]\nComplementing the Aqaba-Amman project is IBRD’s $300 million Jordan \nWater Sector Efficiency Project, which includes financing from partners. This \nis strengthening Jordan’s broader water sector through non-revenue water \nreduction, energy efficiency, and distribution-system readiness. The World Bank Group’s support for Jordan’s water sector aligns with our \nWater Strategy Implementation Plan, which outlines how investments, \nlong-term policy reforms, and institutional sustainability can deliver water \nsecurity, economic growth, and job creation.",
+    "context_ids": [
+      "wb_annual_report_2024_p9_para0",
+      "wb_annual_report_2024_p9_para2"
+    ],
+    "context_chars": 1217,
+    "elapsed_ms": 303.1116999918595,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q07",
+    "split": "dev",
+    "question": "What health crisis causes high rates of premature death and disability in Pacific Island countries? (Khủng hoảng y tế nào gây tử vong sớm ở các quốc đảo Thái Bình Dương?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 12,
+        "evidence": "Pacific Island countries face some of the world’s highest rates of premature death and \ndisability from non-communicable disease, including diabetes,"
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2024_p12_para0",
+        "text": "Pacific Island countries face some of the world’s highest rates of premature death and \ndisability from non-communicable disease, including diabetes, cardiovascular disease, \nand cancer, alongside persistent communicable diseases. Local healthcare systems \nstruggle to provide care to dispersed populations, and the resulting inefficiencies drive \nup service costs and hamper job creation and long-term growth. The World Bank’s Pacific Healthy Islands Transformation (PHIT) project, approved in \nfiscal 2026, is taking a new approach to improving the health of people across the \nregion.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 12,
+        "metadata": {
+          "chunk_id": "wb_annual_report_2024_p12_para0",
+          "physical_page": 12,
+          "chunk_strategy": "by_paragraph",
+          "char_count": 2310,
+          "year": 2024,
+          "institution": "WBG",
+          "chunk_index": 0,
+          "page": 12,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "document_id": "wb_annual_report_2024"
+        },
+        "score": 0.03278688524590164,
+        "distance": 0.36230260133743286,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2023_p29_para6",
+        "text": "This \nincludes island countries in the Pacific, which are particularly vulnerable to climate \nFIGURE 3 EAST ASIA AND PACIFIC\nIBRD AND IDA LENDING BY SECTOR • FISCAL 2023\nSHARE OF TOTAL OF $7 .5 BILLION\nWater, Sanitation,\nand Waste Management 10%\nTransportation 3%\nSocial Protection 4%\nHealth 10%\n18%\nFinancial Sector\nIndustry, Trade, and Services\nInformation and \nCommunications Technologies 3%\n3%\n21%\n9%\n2%\nEnergy and Extractives\nEducation\nAgriculture, Fishing,\nand Forestry\n\nPublic Administration 17%",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 29,
+        "metadata": {
+          "char_count": 3217,
+          "institution": "WBG",
+          "year": 2023,
+          "chunk_index": 6,
+          "chunk_strategy": "by_paragraph",
+          "page": 29,
+          "document_id": "wb_annual_report_2023",
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "chunk_id": "wb_annual_report_2023_p29_para6",
+          "physical_page": 29
+        },
+        "score": 0.0315136476426799,
+        "distance": 0.5194141864776611,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2024_p12_para4",
+        "text": "TRANSFORMING \nHEALTHCARE \nACROSS THE PACIFIC\n16,000 \nHEALTH AND HEALTH-\nSUPPORT JOBS ACROSS \nTHE PACIFIC WILL BE \nSAFEGUARDED BY \nOUR FINANCING\n21\nTHE WORLD BANK GROUP ANNUAL REPORT 202620\nTHE WORLD BANK GROUP ANNUAL REPORT 2026",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 12,
+        "metadata": {
+          "char_count": 2310,
+          "institution": "WBG",
+          "chunk_index": 4,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "page": 12,
+          "chunk_id": "wb_annual_report_2024_p12_para4",
+          "physical_page": 12,
+          "chunk_strategy": "by_paragraph",
+          "year": 2024,
+          "document_id": "wb_annual_report_2024"
+        },
+        "score": 0.030309988518943745,
+        "distance": 0.5259796380996704,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2024_p12_para0 | data/world_bank_annual_report_2024.pdf | page 12]\nPacific Island countries face some of the world’s highest rates of premature death and \ndisability from non-communicable disease, including diabetes, cardiovascular disease, \nand cancer, alongside persistent communicable diseases. Local healthcare systems \nstruggle to provide care to dispersed populations, and the resulting inefficiencies drive \nup service costs and hamper job creation and long-term growth. The World Bank’s Pacific Healthy Islands Transformation (PHIT) project, approved in \nfiscal 2026, is taking a new approach to improving the health of people across the \nregion.\n\n[wb_annual_report_2023_p29_para6 | data/world_bank_annual_report_2023.pdf | page 29]\nThis \nincludes island countries in the Pacific, which are particularly vulnerable to climate \nFIGURE 3 EAST ASIA AND PACIFIC\nIBRD AND IDA LENDING BY SECTOR • FISCAL 2023\nSHARE OF TOTAL OF $7 .5 BILLION\nWater, Sanitation,\nand Waste Management 10%\nTransportation 3%\nSocial Protection 4%\nHealth 10%\n18%\nFinancial Sector\nIndustry, Trade, and Services\nInformation and \nCommunications Technologies 3%\n3%\n21%\n9%\n2%\nEnergy and Extractives\nEducation\nAgriculture, Fishing,\nand Forestry\n\nPublic Administration 17%",
+    "context_ids": [
+      "wb_annual_report_2024_p12_para0",
+      "wb_annual_report_2023_p29_para6"
+    ],
+    "context_chars": 1261,
+    "elapsed_ms": 308.2644999958575,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q08",
+    "split": "dev",
+    "question": "What causes over 40 percent of greenhouse gas emissions in Indonesia? (Nguyên nhân gây ra hơn 40% lượng phát thải khí nhà kính tại Indonesia là gì?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2023",
+        "page": 31,
+        "evidence": "In Indonesia, more than 40 percent of the country’s emissions result from defor -\nestation and fires that release carbon into the atmosphere."
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2023_p31_para1",
+        "text": "This objective is part of Indonesia’s efforts to \nreduce greenhouse gas emissions by 32 percent—or as much as 43 percent with \ninternational assistance—by 2030. In addition to reducing emissions, sustainable \nforest management activities can also improve communities’ livelihoods. The Bank has supported Indonesia’s transition toward low-carbon, resilient, bio-\ndiverse, and prosperous landscapes since 2016 through the Sustainable Landscape \nManagement Program, which has yielded four important lessons. First, strong gov-\nernment leadership is essential, particularly at the local level.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 31,
+        "metadata": {
+          "chunk_index": 1,
+          "page": 31,
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "chunk_id": "wb_annual_report_2023_p31_para1",
+          "year": 2023,
+          "document_id": "wb_annual_report_2023",
+          "chunk_strategy": "by_paragraph",
+          "institution": "WBG",
+          "physical_page": 31,
+          "char_count": 2847
+        },
+        "score": 0.03278688524590164,
+        "distance": 0.4837053418159485,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2023_p31_para0",
+        "text": "THE RE GIONS 27 THE RE GIONS 27\nProtecting forests and improving livelihoods in \nIndonesia\nIn Indonesia, more than 40 percent of the country’s emissions result from defor -\nestation and fires that release carbon into the atmosphere. But the undamaged \ntrees and forests that remain help temper the damage by absorbing the carbon—\neffectively acting as a sink to drain carbon from the air. Indonesia wants to make its \nforests a net carbon sink by 2030 by fostering forest and land use practices that \nabsorb more carbon than is emitted.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 31,
+        "metadata": {
+          "chunk_index": 0,
+          "physical_page": 31,
+          "institution": "WBG",
+          "char_count": 2847,
+          "page": 31,
+          "chunk_id": "wb_annual_report_2023_p31_para0",
+          "chunk_strategy": "by_paragraph",
+          "year": 2023,
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "document_id": "wb_annual_report_2023"
+        },
+        "score": 0.03200204813108039,
+        "distance": 0.5076645612716675,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2023_p75_para6",
+        "text": "The purifier project will make clean water available to 2 million children in Vietnam \nand reduce greenhouse gas emissions by almost 6 million tons of CO2 over 10 years. Promoting Sustainable Finance \nand Capital Markets",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 75,
+        "metadata": {
+          "institution": "WBG",
+          "chunk_strategy": "by_paragraph",
+          "page": 75,
+          "document_id": "wb_annual_report_2023",
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "char_count": 3421,
+          "chunk_id": "wb_annual_report_2023_p75_para6",
+          "chunk_index": 6,
+          "physical_page": 75,
+          "year": 2023
+        },
+        "score": 0.031024531024531024,
+        "distance": 0.538222074508667,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2023_p31_para1 | data/world_bank_annual_report_2023.pdf | page 31]\nThis objective is part of Indonesia’s efforts to \nreduce greenhouse gas emissions by 32 percent—or as much as 43 percent with \ninternational assistance—by 2030. In addition to reducing emissions, sustainable \nforest management activities can also improve communities’ livelihoods. The Bank has supported Indonesia’s transition toward low-carbon, resilient, bio-\ndiverse, and prosperous landscapes since 2016 through the Sustainable Landscape \nManagement Program, which has yielded four important lessons. First, strong gov-\nernment leadership is essential, particularly at the local level.\n\n[wb_annual_report_2023_p31_para0 | data/world_bank_annual_report_2023.pdf | page 31]\nTHE RE GIONS 27 THE RE GIONS 27\nProtecting forests and improving livelihoods in \nIndonesia\nIn Indonesia, more than 40 percent of the country’s emissions result from defor -\nestation and fires that release carbon into the atmosphere. But the undamaged \ntrees and forests that remain help temper the damage by absorbing the carbon—\neffectively acting as a sink to drain carbon from the air. Indonesia wants to make its \nforests a net carbon sink by 2030 by fostering forest and land use practices that \nabsorb more carbon than is emitted.",
+    "context_ids": [
+      "wb_annual_report_2023_p31_para1",
+      "wb_annual_report_2023_p31_para0"
+    ],
+    "context_chars": 1297,
+    "elapsed_ms": 315.4921999957878,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q09",
+    "split": "dev",
+    "question": "By what percentage can low-carbon development strategies reduce emissions without harming growth? (Chiến lược phát thải carbon thấp có thể giảm bao nhiêu % khí thải mà không hại tăng trưởng?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2023",
+        "page": 14,
+        "evidence": "Collectively, the low-carbon development strategies from these reports can reduce \nemissions by 70 percent, without harming growth."
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2023_p14_para0",
+        "text": "10 THE WORLD BANK ANNUAL REPORT 2023\nCollectively, the low-carbon development strategies from these reports can reduce \nemissions by 70 percent, without harming growth. As of July 1, 2023, all new Bank \nfinancing operations—including projects and other assistance—that go to our \nBoard will be expected to demonstrate how they meet our commitment to the Paris \nAgreement goals (see more on page 46). The COVID-19 pandemic made clear the importance of preventing, preparing for, \nand responding to pandemics, especially in developing countries.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 14,
+        "metadata": {
+          "document_id": "wb_annual_report_2023",
+          "chunk_strategy": "by_paragraph",
+          "char_count": 4397,
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "institution": "WBG",
+          "chunk_id": "wb_annual_report_2023_p14_para0",
+          "page": 14,
+          "year": 2023,
+          "chunk_index": 0,
+          "physical_page": 14
+        },
+        "score": 0.030886196246139225,
+        "distance": 0.541707456111908,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2023_p29_para3",
+        "text": "Mobilizing climate finance for resilient growth\nThrough the World Bank’s Country Climate and Development Reports, we offer \nconcrete, evidence-based proposals for countries to address climate change with-\nout sacrificing their development goals. The report for China analyzed the funda-\nmental changes in energy, industry, transport, cities, and land use that could help \nrealize national commitments to reach peak carbon emissions before 2030 and \nachieve carbon neutrality by 2060.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 29,
+        "metadata": {
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "char_count": 3217,
+          "chunk_strategy": "by_paragraph",
+          "physical_page": 29,
+          "document_id": "wb_annual_report_2023",
+          "year": 2023,
+          "chunk_id": "wb_annual_report_2023_p29_para3",
+          "page": 29,
+          "chunk_index": 3,
+          "institution": "WBG"
+        },
+        "score": 0.030798389007344232,
+        "distance": 0.5384125709533691,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2023_p50_para1",
+        "text": "We know that \nour projects reduce emissions, deliver cleaner air, better water quality, and better \nhealth for people. But just how much of a difference is that climate finance making? How is it contributing to development paths that bring the world to net zero emis-\nsions and keep people safe from climate impacts? T o address climate and development together, we identify strategies to reduce \ngreenhouse gas emissions in countries while supporting sustainable development \nthrough a new core diagnostic, the Country Climate and Development Reports .",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 50,
+        "metadata": {
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "chunk_id": "wb_annual_report_2023_p50_para1",
+          "page": 50,
+          "char_count": 4358,
+          "physical_page": 50,
+          "chunk_index": 1,
+          "chunk_strategy": "by_paragraph",
+          "year": 2023,
+          "institution": "WBG",
+          "document_id": "wb_annual_report_2023"
+        },
+        "score": 0.03076923076923077,
+        "distance": 0.5191813707351685,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2023_p14_para0 | data/world_bank_annual_report_2023.pdf | page 14]\n10 THE WORLD BANK ANNUAL REPORT 2023\nCollectively, the low-carbon development strategies from these reports can reduce \nemissions by 70 percent, without harming growth. As of July 1, 2023, all new Bank \nfinancing operations—including projects and other assistance—that go to our \nBoard will be expected to demonstrate how they meet our commitment to the Paris \nAgreement goals (see more on page 46). The COVID-19 pandemic made clear the importance of preventing, preparing for, \nand responding to pandemics, especially in developing countries.\n\n[wb_annual_report_2023_p29_para3 | data/world_bank_annual_report_2023.pdf | page 29]\nMobilizing climate finance for resilient growth\nThrough the World Bank’s Country Climate and Development Reports, we offer \nconcrete, evidence-based proposals for countries to address climate change with-\nout sacrificing their development goals. The report for China analyzed the funda-\nmental changes in energy, industry, transport, cities, and land use that could help \nrealize national commitments to reach peak carbon emissions before 2030 and \nachieve carbon neutrality by 2060.",
+    "context_ids": [
+      "wb_annual_report_2023_p14_para0",
+      "wb_annual_report_2023_p29_para3"
+    ],
+    "context_chars": 1198,
+    "elapsed_ms": 386.2410000001546,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q10",
+    "split": "dev",
+    "question": "What was the devastating impact of Cyclone Freddy in Malawi reported in 2023? (Tác động tàn khốc của bão Cyclone Freddy tại Malawi được ghi nhận như thế nào?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2023",
+        "page": 23,
+        "evidence": "With over 1,000 lives lost, hundreds of thousands displaced in camps, and roads, \nbridges, schools, hospitals, and powerlines damaged, Cyclone Freddy"
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2023_p23_para0",
+        "text": "THE RE GIONS 19\nMoving from response to resilience in \ncyclone-battered Malawi\nWith over 1,000 lives lost, hundreds of thousands displaced in camps, and roads, \nbridges, schools, hospitals, and powerlines damaged, Cyclone Freddy was the latest \nin a series of shocks that devastated the lives and livelihoods of the poorest and \nmost vulnerable people in Malawi, as well as the country’s prospects for long-term, \ninclusive growth.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 23,
+        "metadata": {
+          "page": 23,
+          "char_count": 2302,
+          "chunk_strategy": "by_paragraph",
+          "chunk_id": "wb_annual_report_2023_p23_para0",
+          "physical_page": 23,
+          "institution": "WBG",
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "document_id": "wb_annual_report_2023",
+          "year": 2023,
+          "chunk_index": 0
+        },
+        "score": 0.03278688524590164,
+        "distance": 0.24923652410507202,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2023_p20_para6",
+        "text": "We also protected food security and livelihoods for another \n600,000 people in the aftermath of a major locust outbreak in 2020 by temporarily \nscaling up the regular program and delivery of emergency cash transfers. In March 2023, the longest-lasting tropical cyclone ever recorded in the Southern \nHemisphere hit Malawi and Mozambique.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 20,
+        "metadata": {
+          "char_count": 3635,
+          "document_id": "wb_annual_report_2023",
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "physical_page": 20,
+          "year": 2023,
+          "chunk_index": 6,
+          "chunk_id": "wb_annual_report_2023_p20_para6",
+          "page": 20,
+          "institution": "WBG",
+          "chunk_strategy": "by_paragraph"
+        },
+        "score": 0.031746031746031744,
+        "distance": 0.42645424604415894,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2023_p20_para7",
+        "text": "Immediately following Cyclone Freddy, \nTABLE 2 EASTERN AND SOUTHERN AFRICA\nREGIONAL COMMITMENTS AND DISBURSEMENTS FOR FISCAL 2021–23\nCOMMITMENTS ($ MILLIONS) DISBURSEMENTS ($ MILLIONS)\nFY21 FY22 FY23 FY21 FY22 FY23\nIBRD 1,525 2,907 2,364 325 2,441 1,690\nIDA 14,089 15,266 14,368 8,081 7 ,133 10,417\nPortfolio of operations under implementation as of June 30, 2023: $74.2 billion. Eastern and \nSouthern Africa",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 20,
+        "metadata": {
+          "physical_page": 20,
+          "institution": "WBG",
+          "char_count": 3635,
+          "chunk_strategy": "by_paragraph",
+          "year": 2023,
+          "chunk_id": "wb_annual_report_2023_p20_para7",
+          "chunk_index": 7,
+          "document_id": "wb_annual_report_2023",
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "page": 20
+        },
+        "score": 0.0315136476426799,
+        "distance": 0.39124029874801636,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2023_p23_para0 | data/world_bank_annual_report_2023.pdf | page 23]\nTHE RE GIONS 19\nMoving from response to resilience in \ncyclone-battered Malawi\nWith over 1,000 lives lost, hundreds of thousands displaced in camps, and roads, \nbridges, schools, hospitals, and powerlines damaged, Cyclone Freddy was the latest \nin a series of shocks that devastated the lives and livelihoods of the poorest and \nmost vulnerable people in Malawi, as well as the country’s prospects for long-term, \ninclusive growth.\n\n[wb_annual_report_2023_p20_para6 | data/world_bank_annual_report_2023.pdf | page 20]\nWe also protected food security and livelihoods for another \n600,000 people in the aftermath of a major locust outbreak in 2020 by temporarily \nscaling up the regular program and delivery of emergency cash transfers. In March 2023, the longest-lasting tropical cyclone ever recorded in the Southern \nHemisphere hit Malawi and Mozambique.\n\n[wb_annual_report_2023_p20_para7 | data/world_bank_annual_report_2023.pdf | page 20]\nImmediately following Cyclone Freddy, \nTABLE 2 EASTERN AND SOUTHERN AFRICA\nREGIONAL COMMITMENTS AND DISBURSEMENTS FOR FISCAL 2021–23\nCOMMITMENTS ($ MILLIONS) DISBURSEMENTS ($ MILLIONS)\nFY21 FY22 FY23 FY21 FY22 FY23\nIBRD 1,525 2,907 2,364 325 2,441 1,690\nIDA 14,089 15,266 14,368 8,081 7 ,133 10,417\nPortfolio of operations under implementation as of June 30, 2023: $74.2 billion. Eastern and \nSouthern Africa",
+    "context_ids": [
+      "wb_annual_report_2023_p23_para0",
+      "wb_annual_report_2023_p20_para6",
+      "wb_annual_report_2023_p20_para7"
+    ],
+    "context_chars": 1435,
+    "elapsed_ms": 318.0139999894891,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q11",
+    "split": "dev",
+    "question": "What role does the World Bank serve regarding Financial Intermediary Funds (FIFs)? (Ngân hàng Thế giới đóng vai trò gì đối với các Quỹ FIFs?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 26,
+        "evidence": "Financial intermediary funds (FIFs) represent large, \ndistinct, multi-partner financing arrangements, for \nwhich the World Bank provides administrative support."
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2024_p26_para0",
+        "text": "FINANCIAL INTERMEDIARY FUNDS \nFinancial intermediary funds (FIFs) represent large, \ndistinct, multi-partner financing arrangements, for \nwhich the World Bank provides administrative support. They enable the international community to pool \nand coordinate funding from many sources to tackle \nspecific development challenges, such as disease, \nfood security, and other systemic changes. FIFs are \nindependently governed, and the World Bank Group \nhas no decision-making authority.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 26,
+        "metadata": {
+          "year": 2024,
+          "char_count": 1508,
+          "chunk_id": "wb_annual_report_2024_p26_para0",
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "chunk_index": 0,
+          "page": 26,
+          "institution": "WBG",
+          "document_id": "wb_annual_report_2024",
+          "chunk_strategy": "by_paragraph",
+          "physical_page": 26
+        },
+        "score": 0.03252247488101534,
+        "distance": 0.16929090023040771,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2024_p26_para1",
+        "text": "Instead, FIFs rely on \nthe World Bank to provide financial and other services \nto facilitate their funding efforts and decisions. The \nWorld Bank serves as trustee for 27 FIFs. At the end of \nfiscal 2026, $45.2 billion was held in trust in the form \nof cash, investments, and promissory notes for FIFs. Seventeen FIFs have also selected the World Bank to \nhost their secretariats, and 19 FIFs use World Bank \nGroup institutions as their implementing entities. For more information, visit https://www. worldbank.org/en/about/unit/pim.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 26,
+        "metadata": {
+          "document_id": "wb_annual_report_2024",
+          "chunk_index": 1,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "page": 26,
+          "char_count": 1508,
+          "institution": "WBG",
+          "year": 2024,
+          "chunk_strategy": "by_paragraph",
+          "physical_page": 26,
+          "chunk_id": "wb_annual_report_2024_p26_para1"
+        },
+        "score": 0.03252247488101534,
+        "distance": 0.2586700916290283,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2023_p84_para0",
+        "text": "80 THE WORLD BANK ANNUAL REPORT 2023\nSupporting countries through trust funds and financial \nintermediary funds\nThrough trust funds and financial intermediary funds, the Bank Group can deploy \nfinancing quickly, expand operations, and generate knowledge to help countries \nreduce poverty and boost shared prosperity in a sustainable way. These funds have \nprovided financing, analytical support, and policy advice to respond to develop -\nment challenges such as COVID-19, climate change, the food and energy crises, and \nRussia’s invasion of Ukraine.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 84,
+        "metadata": {
+          "physical_page": 84,
+          "chunk_index": 0,
+          "year": 2023,
+          "page": 84,
+          "char_count": 3738,
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "chunk_strategy": "by_paragraph",
+          "chunk_id": "wb_annual_report_2023_p84_para0",
+          "document_id": "wb_annual_report_2023",
+          "institution": "WBG"
+        },
+        "score": 0.031746031746031744,
+        "distance": 0.35399478673934937,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2024_p26_para0 | data/world_bank_annual_report_2024.pdf | page 26]\nFINANCIAL INTERMEDIARY FUNDS \nFinancial intermediary funds (FIFs) represent large, \ndistinct, multi-partner financing arrangements, for \nwhich the World Bank provides administrative support. They enable the international community to pool \nand coordinate funding from many sources to tackle \nspecific development challenges, such as disease, \nfood security, and other systemic changes. FIFs are \nindependently governed, and the World Bank Group \nhas no decision-making authority.\n\n[wb_annual_report_2024_p26_para1 | data/world_bank_annual_report_2024.pdf | page 26]\nInstead, FIFs rely on \nthe World Bank to provide financial and other services \nto facilitate their funding efforts and decisions. The \nWorld Bank serves as trustee for 27 FIFs. At the end of \nfiscal 2026, $45.2 billion was held in trust in the form \nof cash, investments, and promissory notes for FIFs. Seventeen FIFs have also selected the World Bank to \nhost their secretariats, and 19 FIFs use World Bank \nGroup institutions as their implementing entities. For more information, visit https://www. worldbank.org/en/about/unit/pim.",
+    "context_ids": [
+      "wb_annual_report_2024_p26_para0",
+      "wb_annual_report_2024_p26_para1"
+    ],
+    "context_chars": 1184,
+    "elapsed_ms": 355.3255000151694,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q12",
+    "split": "dev",
+    "question": "What are the 3 Pillars of the World Bank Group strategy in fiscal 2024? (3 trụ cột chiến lược của WB trong năm 2024 là gì?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": {
+      "year": 2024
+    },
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 7,
+        "evidence": "3 Pillars\nInvest in foundational physical \nand human infrastructure\nSupport a business-enabling \nenvironment with clear rules \nand regulations\nMobilize private capital \nat scale"
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2024_p3_para3",
+        "text": "ABOUT US\n3\nTHE WORLD BANK GROUP ANNUAL REPORT 20262\nTHE WORLD BANK GROUP ANNUAL REPORT 2026",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 3,
+        "metadata": {
+          "document_id": "wb_annual_report_2024",
+          "page": 3,
+          "physical_page": 3,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "institution": "WBG",
+          "year": 2024,
+          "chunk_id": "wb_annual_report_2024_p3_para3",
+          "char_count": 1756,
+          "chunk_index": 3,
+          "chunk_strategy": "by_paragraph"
+        },
+        "score": 0.03225806451612903,
+        "distance": 0.41735416650772095,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2024_p17_para4",
+        "text": "In fiscal 2026, the World Bank Group supported jobs, opportunities, and growth \nin developing countries by…\nSOUTH ASIA\n$13.6B \n(BILLION) \n31\nTHE WORLD BANK GROUP ANNUAL REPORT 202630\nTHE WORLD BANK GROUP ANNUAL REPORT 2026",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 17,
+        "metadata": {
+          "document_id": "wb_annual_report_2024",
+          "physical_page": 17,
+          "chunk_strategy": "by_paragraph",
+          "chunk_id": "wb_annual_report_2024_p17_para4",
+          "institution": "WBG",
+          "chunk_index": 4,
+          "char_count": 3562,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "page": 17,
+          "year": 2024
+        },
+        "score": 0.029411764705882353,
+        "distance": 0.44695496559143066,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2024_p36_para12",
+        "text": "By 2030, \nnearly 60 percent of the world’s extreme poor will \nlive in FCV countries. The World Bank Group’s FCV \nStrategy, launched in fiscal 2026, is the institution’s \nfive-year response, with IFC leading on efforts to \nmobilize private investment in the markets where \nit is most scarce. IFC is the largest development finance institution in \nfragile and conflict-affected situations and, in line with \nthe broader World Bank Group strategy, IFC’s approach \nis calibrated to context.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 36,
+        "metadata": {
+          "institution": "WBG",
+          "chunk_strategy": "by_paragraph",
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "page": 36,
+          "chunk_id": "wb_annual_report_2024_p36_para12",
+          "document_id": "wb_annual_report_2024",
+          "char_count": 6699,
+          "chunk_index": 12,
+          "physical_page": 36,
+          "year": 2024
+        },
+        "score": 0.029236022193768675,
+        "distance": 0.46493983268737793,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2024_p3_para3 | data/world_bank_annual_report_2024.pdf | page 3]\nABOUT US\n3\nTHE WORLD BANK GROUP ANNUAL REPORT 20262\nTHE WORLD BANK GROUP ANNUAL REPORT 2026\n\n[wb_annual_report_2024_p17_para4 | data/world_bank_annual_report_2024.pdf | page 17]\nIn fiscal 2026, the World Bank Group supported jobs, opportunities, and growth \nin developing countries by…\nSOUTH ASIA\n$13.6B \n(BILLION) \n31\nTHE WORLD BANK GROUP ANNUAL REPORT 202630\nTHE WORLD BANK GROUP ANNUAL REPORT 2026\n\n[wb_annual_report_2024_p36_para12 | data/world_bank_annual_report_2024.pdf | page 36]\nBy 2030, \nnearly 60 percent of the world’s extreme poor will \nlive in FCV countries. The World Bank Group’s FCV \nStrategy, launched in fiscal 2026, is the institution’s \nfive-year response, with IFC leading on efforts to \nmobilize private investment in the markets where \nit is most scarce. IFC is the largest development finance institution in \nfragile and conflict-affected situations and, in line with \nthe broader World Bank Group strategy, IFC’s approach \nis calibrated to context.",
+    "context_ids": [
+      "wb_annual_report_2024_p3_para3",
+      "wb_annual_report_2024_p17_para4",
+      "wb_annual_report_2024_p36_para12"
+    ],
+    "context_chars": 1057,
+    "elapsed_ms": 365.6865000084508,
+    "hit1": false,
+    "hit3": false,
+    "context_hit": false
+  },
+  {
+    "query_id": "q13",
+    "split": "dev",
+    "question": "In the 2024 report, what milestone did MIGA surpass in cumulative guarantee issuance? (Mốc phát hành bảo lãnh tích lũy MIGA đã vượt qua là bao nhiêu?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": {
+      "year": 2024
+    },
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2024",
+        "page": 4,
+        "evidence": "The Board commends MIGA for surpassing \n$100 billion in cumulative guarantee issuance \nsince its founding in 1988"
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2024_p38_para1",
+        "text": "In fiscal 2026, MIGA marked a major milestone by \nsurpassing $100 billion in cumulative guarantees \nissued since its founding in 1988. With just $366 million \nof paid-in capital from member countries, MIGA has \nsteadily pursued its stated mission for nearly four \ndecades by providing guarantees to private investors. This paves the way for private funds to flow to emerging \nand developing economies, enabling job creation.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 38,
+        "metadata": {
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "year": 2024,
+          "char_count": 2677,
+          "chunk_index": 1,
+          "institution": "WBG",
+          "physical_page": 38,
+          "document_id": "wb_annual_report_2024",
+          "chunk_strategy": "by_paragraph",
+          "chunk_id": "wb_annual_report_2024_p38_para1",
+          "page": 38
+        },
+        "score": 0.032266458495966696,
+        "distance": 0.28011298179626465,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2024_p4_para0",
+        "text": "The World Bank Group Guarantee Platform, \nhosted at MIGA, continues to play a vital role in \nbringing private capital to emerging markets. The Board commends MIGA for surpassing \n$100 billion in cumulative guarantee issuance \nsince its founding in 1988, a remarkable \nachievement from just $366 million in paid-in \ncapital. In addition, in fiscal 2026, the World Bank \nGroup surpassed its goal of $20 billion in annual \nguarantee issuance — four years ahead of the \n2030 target.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 4,
+        "metadata": {
+          "document_id": "wb_annual_report_2024",
+          "institution": "WBG",
+          "char_count": 7465,
+          "year": 2024,
+          "chunk_index": 0,
+          "chunk_id": "wb_annual_report_2024_p4_para0",
+          "chunk_strategy": "by_paragraph",
+          "page": 4,
+          "physical_page": 4,
+          "source": "data/world_bank_annual_report_2024.pdf"
+        },
+        "score": 0.032266458495966696,
+        "distance": 0.3445504903793335,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2024_p40_para4",
+        "text": "This fiscal year, MIGA surpassed $100 billion in \nguarantees issued since its founding. With just \n$366 million of paid-in capital from member countries, \nMIGA has steadily pursued that mission for nearly four \ndecades by providing guarantees to private investors, \npaving the way for private funds to flow to emerging \nand developing economies, enabling job creation. A framework agreement for a portfolio of guarantees \nof up to $1.5 billion, issued in March to AMEA Power \nLimited, pushed MIGA’s cumulative guarantee issuance \npast the $100 billion mark, a major milestone for \nthe institution.",
+        "source_id": "wb_annual_report_2024",
+        "source": "data/world_bank_annual_report_2024.pdf",
+        "page": 40,
+        "metadata": {
+          "chunk_id": "wb_annual_report_2024_p40_para4",
+          "chunk_strategy": "by_paragraph",
+          "page": 40,
+          "document_id": "wb_annual_report_2024",
+          "chunk_index": 4,
+          "char_count": 4983,
+          "physical_page": 40,
+          "source": "data/world_bank_annual_report_2024.pdf",
+          "year": 2024,
+          "institution": "WBG"
+        },
+        "score": 0.03225806451612903,
+        "distance": 0.33006107807159424,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2024_p38_para1 | data/world_bank_annual_report_2024.pdf | page 38]\nIn fiscal 2026, MIGA marked a major milestone by \nsurpassing $100 billion in cumulative guarantees \nissued since its founding in 1988. With just $366 million \nof paid-in capital from member countries, MIGA has \nsteadily pursued its stated mission for nearly four \ndecades by providing guarantees to private investors. This paves the way for private funds to flow to emerging \nand developing economies, enabling job creation.\n\n[wb_annual_report_2024_p4_para0 | data/world_bank_annual_report_2024.pdf | page 4]\nThe World Bank Group Guarantee Platform, \nhosted at MIGA, continues to play a vital role in \nbringing private capital to emerging markets. The Board commends MIGA for surpassing \n$100 billion in cumulative guarantee issuance \nsince its founding in 1988, a remarkable \nachievement from just $366 million in paid-in \ncapital. In addition, in fiscal 2026, the World Bank \nGroup surpassed its goal of $20 billion in annual \nguarantee issuance — four years ahead of the \n2030 target.",
+    "context_ids": [
+      "wb_annual_report_2024_p38_para1",
+      "wb_annual_report_2024_p4_para0"
+    ],
+    "context_chars": 1072,
+    "elapsed_ms": 364.5091999787837,
+    "hit1": false,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q14",
+    "split": "dev",
+    "question": "According to the 2023 report, how does gender equality impact development in Western and Central Africa? (Bình đẳng giới tác động thế nào tới phát triển ở Tây và Trung Phi năm 2023?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": {
+      "year": 2023
+    },
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2023",
+        "page": 27,
+        "evidence": "Gender equality is not only essential for building more inclusive societies, but it \ncan also accelerate progress in other areas of development, from improving human \ncapital and food security to addressing climate change"
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2023_p27_para0",
+        "text": "THE RE GIONS 23\nEmpowering women and girls in Western and \nCentral Africa\nGender equality is not only essential for building more inclusive societies, but it \ncan also accelerate progress in other areas of development, from improving human \ncapital and food security to addressing climate change and fragility. But despite \nprogress, women and girls in Western and Central Africa have a 58 percent chance \nof not being enrolled in secondary school and a 20 percent chance of bearing chil-\ndren as a teenager. Regardless of the sector in which they work, they can expect to \nearn less than men.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 27,
+        "metadata": {
+          "char_count": 3194,
+          "page": 27,
+          "chunk_id": "wb_annual_report_2023_p27_para0",
+          "year": 2023,
+          "physical_page": 27,
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "chunk_index": 0,
+          "institution": "WBG",
+          "chunk_strategy": "by_paragraph",
+          "document_id": "wb_annual_report_2023"
+        },
+        "score": 0.03278688524590164,
+        "distance": 0.3628925085067749,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2023_p27_para3",
+        "text": "But across the continent, the program is attract -\ning more and more female students for whom “science has no gender. ” Currently, \nabout 35 percent of students enrolled in the program across Africa are women. Our work with countries to advance gender equality is showing strong results. According to the World Bank’s most recent Women, Business, and the Law report, \nGabon and Côte d’Ivoire were among the top reformers in Sub-Saharan Africa, \nincreasing their index scores from 82.5 to 95 and from 83.1 to 95, respectively.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 27,
+        "metadata": {
+          "chunk_strategy": "by_paragraph",
+          "document_id": "wb_annual_report_2023",
+          "institution": "WBG",
+          "page": 27,
+          "physical_page": 27,
+          "chunk_id": "wb_annual_report_2023_p27_para3",
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "chunk_index": 3,
+          "char_count": 3194,
+          "year": 2023
+        },
+        "score": 0.03200204813108039,
+        "distance": 0.38101524114608765,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2023_p27_para5",
+        "text": "They are helping close gaps in earnings and \neconomic opportunity, reduce gender-based violence, and afford women and girls’ \nvoice and agency. Guided by our regional gender action plan for Western and Central \nAfrica, the Bank will continue to work with countries across the region to drive trans-\nformational change on the scale that women and girls deserve in order to ensure all \npeople are able to achieve their full potential. Spotlight",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 27,
+        "metadata": {
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "page": 27,
+          "year": 2023,
+          "chunk_strategy": "by_paragraph",
+          "char_count": 3194,
+          "document_id": "wb_annual_report_2023",
+          "physical_page": 27,
+          "chunk_id": "wb_annual_report_2023_p27_para5",
+          "chunk_index": 5,
+          "institution": "WBG"
+        },
+        "score": 0.03057889822595705,
+        "distance": 0.3888644576072693,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2023_p27_para0 | data/world_bank_annual_report_2023.pdf | page 27]\nTHE RE GIONS 23\nEmpowering women and girls in Western and \nCentral Africa\nGender equality is not only essential for building more inclusive societies, but it \ncan also accelerate progress in other areas of development, from improving human \ncapital and food security to addressing climate change and fragility. But despite \nprogress, women and girls in Western and Central Africa have a 58 percent chance \nof not being enrolled in secondary school and a 20 percent chance of bearing chil-\ndren as a teenager. Regardless of the sector in which they work, they can expect to \nearn less than men.\n\n[wb_annual_report_2023_p27_para3 | data/world_bank_annual_report_2023.pdf | page 27]\nBut across the continent, the program is attract -\ning more and more female students for whom “science has no gender. ” Currently, \nabout 35 percent of students enrolled in the program across Africa are women. Our work with countries to advance gender equality is showing strong results. According to the World Bank’s most recent Women, Business, and the Law report, \nGabon and Côte d’Ivoire were among the top reformers in Sub-Saharan Africa, \nincreasing their index scores from 82.5 to 95 and from 83.1 to 95, respectively.",
+    "context_ids": [
+      "wb_annual_report_2023_p27_para0",
+      "wb_annual_report_2023_p27_para3"
+    ],
+    "context_chars": 1290,
+    "elapsed_ms": 380.2494000119623,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  },
+  {
+    "query_id": "q15",
+    "split": "dev",
+    "question": "What intertwined crises are eroding hard-won development progress according to the 2023 President's message? (Những thách thức đan xen nào đang làm xói mòn tiến bộ phát triển năm 2023?)",
+    "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+    "top_k": 3,
+    "budget_chars": 1500,
+    "filter": null,
+    "gold": [
+      {
+        "source_id": "wb_annual_report_2023",
+        "page": 9,
+        "evidence": "poverty, pandem-\nics, climate change, debt, \nconflict, food insecurity, and \nfragility—are eroding decades of hard-\nwon development progress"
+      }
+    ],
+    "results": [
+      {
+        "id": "wb_annual_report_2023_p9_para0",
+        "text": "ME SSAGE FROM THE PRESIDENT 5 \nD\neeply intertwined chal-\nlenges—poverty, pandem-\nics, climate change, debt, \nconflict, food insecurity, and \nfragility—are eroding decades of hard-\nwon development progress; the world \nis looking to us for solutions. Fortu -\nnately, the World Bank is built to take \non difficult challenges. T o truly make \na difference, we will need a greater \nappetite for risk, meaningful private sector financing, and a sense of urgency.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 9,
+        "metadata": {
+          "document_id": "wb_annual_report_2023",
+          "year": 2023,
+          "physical_page": 9,
+          "institution": "WBG",
+          "char_count": 2561,
+          "chunk_strategy": "by_paragraph",
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "page": 9,
+          "chunk_id": "wb_annual_report_2023_p9_para0",
+          "chunk_index": 0
+        },
+        "score": 0.03278688524590164,
+        "distance": 0.4285367727279663,
+        "strategy": "hybrid_rrf",
+        "hit": true
+      },
+      {
+        "id": "wb_annual_report_2023_p13_para0",
+        "text": "ADDRE SSING A MULTITUDE OF GLOBAL CHALLENGES 9 \nAddressing a Multitude of Global Challenges\nT\nhe world is facing myriad global challenges—including climate change, \npandemics, and conflict. At the same time, many developing countries \nare dealing with shrinking growth prospects, weakening investment, and \nsurging debt. These trends are reversing hard-won development gains and \nthreatening progress toward the Sustainable Development Goals: nearly 700 million \npeople are living in extreme poverty, and almost half the world’s population live on \nless than $6.85 a day.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 13,
+        "metadata": {
+          "chunk_id": "wb_annual_report_2023_p13_para0",
+          "page": 13,
+          "year": 2023,
+          "document_id": "wb_annual_report_2023",
+          "chunk_index": 0,
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "char_count": 2020,
+          "chunk_strategy": "by_paragraph",
+          "institution": "WBG",
+          "physical_page": 13
+        },
+        "score": 0.029957522915269395,
+        "distance": 0.49748092889785767,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      },
+      {
+        "id": "wb_annual_report_2023_p65_para3",
+        "text": "Refugee flows have also increased, \nespecially due to the war on Ukraine; and climate change is set to increase migra-\ntion, mostly within countries, with the poorest likely to be the most affected. Accelerating gender equality for sustainable growth and \nresilience\nThe world is experiencing an unprecedented set of intertwined crises with particu-\nlarly negative impacts on women, girls, sexual and gender minorities, and margin-\nalized people. These crises threaten hard-won gains in human capital, economic \nempowerment, and voice and agency.",
+        "source_id": "wb_annual_report_2023",
+        "source": "data/world_bank_annual_report_2023.pdf",
+        "page": 65,
+        "metadata": {
+          "char_count": 4138,
+          "physical_page": 65,
+          "chunk_id": "wb_annual_report_2023_p65_para3",
+          "page": 65,
+          "year": 2023,
+          "chunk_strategy": "by_paragraph",
+          "chunk_index": 3,
+          "document_id": "wb_annual_report_2023",
+          "source": "data/world_bank_annual_report_2023.pdf",
+          "institution": "WBG"
+        },
+        "score": 0.016129032258064516,
+        "strategy": "hybrid_rrf",
+        "hit": false
+      }
+    ],
+    "context": "[wb_annual_report_2023_p9_para0 | data/world_bank_annual_report_2023.pdf | page 9]\nME SSAGE FROM THE PRESIDENT 5 \nD\neeply intertwined chal-\nlenges—poverty, pandem-\nics, climate change, debt, \nconflict, food insecurity, and \nfragility—are eroding decades of hard-\nwon development progress; the world \nis looking to us for solutions. Fortu -\nnately, the World Bank is built to take \non difficult challenges. T o truly make \na difference, we will need a greater \nappetite for risk, meaningful private sector financing, and a sense of urgency.\n\n[wb_annual_report_2023_p13_para0 | data/world_bank_annual_report_2023.pdf | page 13]\nADDRE SSING A MULTITUDE OF GLOBAL CHALLENGES 9 \nAddressing a Multitude of Global Challenges\nT\nhe world is facing myriad global challenges—including climate change, \npandemics, and conflict. At the same time, many developing countries \nare dealing with shrinking growth prospects, weakening investment, and \nsurging debt. These trends are reversing hard-won development gains and \nthreatening progress toward the Sustainable Development Goals: nearly 700 million \npeople are living in extreme poverty, and almost half the world’s population live on \nless than $6.85 a day.",
+    "context_ids": [
+      "wb_annual_report_2023_p9_para0",
+      "wb_annual_report_2023_p13_para0"
+    ],
+    "context_chars": 1197,
+    "elapsed_ms": 363.47040001419373,
+    "hit1": true,
+    "hit3": true,
+    "context_hit": true
+  }
+]

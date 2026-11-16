@@ -1,0 +1,14 @@
+{
+  "strategy": "Hybrid RRF (Budget 1500 + Filter)",
+  "split": "dev",
+  "n": 15,
+  "hit1": 9,
+  "hit1_ratio": "9/15 (60.0%)",
+  "hit3": 14,
+  "hit3_ratio": "14/15 (93.3%)",
+  "context_hit": 14,
+  "context_hit_ratio": "14/15 (93.3%)",
+  "avg_context_chars": 1213.7333333333333,
+  "median_ms": 330.89680000557564,
+  "service_cost_usd": 0.0
+}

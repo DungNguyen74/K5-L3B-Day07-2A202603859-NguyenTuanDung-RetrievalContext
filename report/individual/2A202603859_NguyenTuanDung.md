@@ -38,9 +38,9 @@
 | **Baseline (P1)** | TF-IDF Lexical, top-k=3, budget=800 | Khớp từ khóa chuẩn hóa NFC | dev | 10/15 (66.7%) | 14/15 (93.3%) | 10/15 (66.7%) | 4.64ms / $0 |
 | **Phương pháp 2 (P2)** | Dense ChromaDB (MiniLM-384d), top-k=3, budget=800 | Truy xuất ngữ nghĩa cosine space | dev | 8/15 (53.3%) | 13/15 (86.7%) | 8/15 (53.3%) | 275.71ms / $0 |
 | **Phương pháp 3 (P3)** | Hybrid RRF (Dense + TF-IDF), k=60, top-k=3, budget=800 | Hợp nhất thứ hạng Reciprocal Rank Fusion | dev | 9/15 (60.0%) | 14/15 (93.3%) | 9/15 (60.0%) | 288.44ms / $0 |
-| Cải thiện 1 | [Triển khai CP4: Budget 1500 chars] | Mở rộng budget tránh cắt mất rank 2-3 | dev | | | | |
-| Cải thiện 2 | [Triển khai CP4: Hybrid + Metadata Filter] | Lọc metadata chỉ định năm + RRF | dev | | | | |
-| Cấu hình đã chọn | | | test | | | | |
+| **Cải thiện 1** | Dense ChromaDB, top-k=3, budget=1500 | Nâng context budget 800 $\rightarrow$ 1500 chars tránh cắt cụt | dev | 8/15 (53.3%) | 13/15 (86.7%) | 11/15 (73.3%) | 265.12ms / $0 |
+| **Cải thiện 2 (Được chọn)** | Hybrid RRF + Filter + Budget 1500 | RRF hợp nhất + Lọc metadata năm + Budget 1500 | dev | 9/15 (60.0%) | **14/15 (93.3%)** | **14/15 (93.3%)** | 282.40ms / $0 |
+| Cấu hình đã chọn | Hybrid RRF + Filter + Budget 1500 | Đánh giá độc lập trên tập test | test | [CP5] | [CP5] | [CP5] | [CP5] |
 | **Baseline (P1)** | TF-IDF Lexical, top-k=3, budget=800 | Đánh giá độc lập trên tập test | test | 4/5 (80.0%) | 4/5 (80.0%) | 4/5 (80.0%) | 4.36ms / $0 |
 | **Phương pháp 2 (P2)** | Dense ChromaDB (MiniLM-384d), top-k=3, budget=800 | Đánh giá độc lập trên tập test | test | 2/5 (40.0%) | 2/5 (40.0%) | 2/5 (40.0%) | 206.83ms / $0 |
 | **Phương pháp 3 (P3)** | Hybrid RRF (Dense + TF-IDF), k=60, top-k=3, budget=800 | Đánh giá độc lập trên tập test | test | 3/5 (60.0%) | 4/5 (80.0%) | 3/5 (60.0%) | 266.91ms / $0 |
@@ -51,6 +51,27 @@
 3. **Phương pháp 3 — Hybrid Retrieval (Dense + Lexical kết hợp RRF):** Khởi chạy song song cả Dense Retriever và Lexical Retriever để lấy ra danh sách ứng viên (candidate pool $N=15$). Hợp nhất thứ hạng bằng thuật toán Reciprocal Rank Fusion:
    $$RRF(d) = \frac{1}{60 + rank_{dense}(d)} + \frac{1}{60 + rank_{lexical}(d)}$$
    Phương pháp này bù đắp điểm yếu của cả hai phía: vừa giữ được từ khóa độc nhất (tên riêng, số liệu) nhờ Lexical, vừa nắm bắt được ngữ nghĩa tổng quan nhờ Dense. Kết quả: Evidence Hit@3 đạt **14/15 (93.3%)** trên tập Dev và **4/5 (80.0%)** trên tập Test.
+
+### Phân tích 2 lỗi trên Dev, Thử nghiệm cải thiện và Lý do chọn cấu hình (Checkpoint 4)
+
+#### 1. Phân tích 2 ca lỗi tiêu biểu trên tập Dev:
+- **Lỗi 1 — Câu `q09` (Dev, Báo cáo 2023):**
+  - *Câu hỏi:* *"By what percentage can low-carbon development strategies reduce emissions without harming growth?"*
+  - *Bằng chứng chuẩn (Gold Target):* Trang 14: *"Collectively, the low-carbon development strategies from these reports can reduce emissions by 70 percent, without harming growth."*
+  - *Nguyên nhân thất bại ở Dense Retrieval:* Mô hình embedding 384 chiều bị hiện tượng trôi ngữ nghĩa (*semantic drift*), gán độ tương đồng cao cho các đoạn thảo luận chung về biến đổi khí hậu, làm chìm mất con số định lượng *"70 percent"*.
+  - *Biện pháp cải thiện:* Cấu hình Hybrid RRF kết hợp tín hiệu Lexical TF-IDF đã nhận diện ngay từ khóa hiếm `"70 percent"` và đưa chunk trang 14 lên Top-1.
+- **Lỗi 2 — Câu `q07` (Dev, Báo cáo 2024):**
+  - *Câu hỏi:* *"What health crisis causes high rates of premature death and disability in Pacific Island countries?"*
+  - *Bằng chứng chuẩn (Gold Target):* Trang 12: *"Pacific Island countries face some of the world’s highest rates of premature death and disability from non-communicable disease, including diabetes..."*
+  - *Nguyên nhân thất bại ở Baseline Budget 800 (Context Cutoff):* Chunk Rank 1 (nói về y tế chung) dài 540 ký tự. Chunk Rank 2 chứa đúng bằng chứng dài 480 ký tự. Tổng ký tự $540 + 480 = 1.020 > 800$ ký tự $\rightarrow$ Chunk Rank 2 bị hàm `pack_context` cắt bỏ hoàn toàn! Dẫn tới `Evidence Hit@3 = True` nhưng `Context Hit = False` (Agent buộc phải từ chối do thiếu bằng chứng trong context).
+  - *Biện pháp cải thiện:* Nâng context budget lên 1.500 ký tự (Cải thiện 1 & 2) giúp cả 2 chunk cùng nằm trọn vẹn trong context, đưa Context Hit chuyển từ False sang True!
+
+#### 2. Tiêu chí chọn Cấu hình Tối ưu (Đóng băng trước khi chạy Test):
+- **Cấu hình được lựa chọn:** **Cải thiện 2 — Hybrid RRF (Dense + TF-IDF) kết hợp Metadata Filtering và Ngân sách Context 1.500 ký tự**.
+- **Lý do lựa chọn:**
+  1. Đạt **Context Evidence Rate cao nhất trên Dev: 14/15 (93.3%)**, xóa bỏ triệt để hiện tượng cắt cụt context.
+  2. Đạt **Evidence Hit@3 cao nhất trên Dev: 14/15 (93.3%)**, cân bằng giữa bắt từ khóa chính xác và nắm bắt ngữ nghĩa.
+  3. Độ trễ truy vấn trung bình chấp nhận được (282.40ms), chi phí 0.00 USD.
 
 ---
 
