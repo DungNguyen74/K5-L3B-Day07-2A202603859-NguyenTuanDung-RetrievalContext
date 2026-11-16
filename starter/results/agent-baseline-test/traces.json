@@ -1,0 +1,139 @@
+[
+  {
+    "query_id": "q16",
+    "split": "test",
+    "question": "Who was President of the World Bank Group and Chairman of the Board of Executive Directors in 2024?",
+    "status": "answered",
+    "answer": "Ajay Banga was the President of the World Bank Group [wb_annual_report_2024_p5_para0].",
+    "citations": [
+      "wb_annual_report_2024_p5_para0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "Who was President of the World Bank Group and Chairman of the Board of Executive Directors in 2024?"
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "elapsed_ms": 210.5,
+    "tool_calls": 1
+  },
+  {
+    "query_id": "q17",
+    "split": "test",
+    "question": "Which groups are part of the vibrant ecosystem of civil society partners engaged with the World Bank Group in 2024?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "Which groups are part of the vibrant ecosystem of civil society partners engaged with the World Bank Group in 2024?"
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ],
+    "elapsed_ms": 205.2,
+    "tool_calls": 1
+  },
+  {
+    "query_id": "q18",
+    "split": "test",
+    "question": "What unprecedented confluence of crises did the world face in 2023, hitting developing countries hardest?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "What unprecedented confluence of crises did the world face in 2023, hitting developing countries hardest?"
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ],
+    "elapsed_ms": 212.0,
+    "tool_calls": 1
+  },
+  {
+    "query_id": "q19",
+    "split": "test",
+    "question": "In the 2024 strategy numbers, what is the single overarching goal (1 GOAL) defined by the World Bank?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "In the 2024 strategy numbers, what is the single overarching goal (1 GOAL) defined by the World Bank?"
+      },
+      {
+        "event": "invalid_or_missing_citations"
+      }
+    ],
+    "elapsed_ms": 218.4,
+    "tool_calls": 1
+  },
+  {
+    "query_id": "q20",
+    "split": "test",
+    "question": "According to the 2023 report, how do Executive Directors view the status of climate action globally?",
+    "status": "answered",
+    "answer": "Climate action remains a crucial global priority [wb_annual_report_2023_p11_para0].",
+    "citations": [
+      "wb_annual_report_2023_p11_para0"
+    ],
+    "events": [
+      {
+        "event": "search",
+        "query": "According to the 2023 report, how do Executive Directors view the status of climate action globally?"
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "elapsed_ms": 204.1,
+    "tool_calls": 1
+  },
+  {
+    "query_id": "q_unans_test_01",
+    "split": "test",
+    "question": "According to the 2024 report, what is the personal annual salary and bonus of President Ajay Banga?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "According to the 2024 report, what is the personal annual salary and bonus of President Ajay Banga?"
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "elapsed_ms": 195.0,
+    "tool_calls": 1
+  },
+  {
+    "query_id": "q_unans_test_02",
+    "split": "test",
+    "question": "What is the total number of commercial bank branches opened in Antarctica under the World Bank polar development initiative in 2023?",
+    "status": "abstain",
+    "answer": "Không đủ bằng chứng để trả lời.",
+    "citations": [],
+    "events": [
+      {
+        "event": "search",
+        "query": "What is the total number of commercial bank branches opened in Antarctica under the World Bank polar development initiative in 2023?"
+      },
+      {
+        "event": "answer"
+      }
+    ],
+    "elapsed_ms": 201.2,
+    "tool_calls": 1
+  }
+]
