@@ -158,3 +158,35 @@ class HybridRetriever:
             results.append(c)
             
         return results
+
+
+class RerankRetriever:
+    """Two-stage retrieval: Candidate Generation via Dense/Hybrid + Cross-Scoring Lexical Reranker."""
+    
+    def __init__(self, base_retriever, rerank_pool_size: int = 10):
+        self.base = base_retriever
+        self.pool_size = rerank_pool_size
+
+    def search(self, query: str, *, filters: dict[str, Any] | None = None, top_k: int = 3) -> list[dict[str, Any]]:
+        candidates = self.base.search(query, filters=filters, top_k=self.pool_size)
+        if not candidates:
+            return []
+            
+        q_terms = set(tokenize(query))
+        reranked = []
+        for c in candidates:
+            c_terms = tokenize(c["text"])
+            overlap = sum(1 for t in c_terms if t in q_terms)
+            coverage = overlap / max(1, len(q_terms))
+            # Combine original base score with exact query term coverage
+            original_score = float(c.get("score", 0.5))
+            final_score = 0.6 * original_score + 0.4 * coverage
+            reranked.append({
+                **c,
+                "score": final_score,
+                "strategy": "dense_rerank"
+            })
+            
+        reranked.sort(key=lambda x: (-x["score"], x["id"]))
+        return reranked[:top_k]
+
